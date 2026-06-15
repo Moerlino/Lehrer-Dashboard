@@ -1,0 +1,359 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Lehrerhandbuch und vollständiges Materialpaket zu Erich Kästners Modernes Märchen für eine Einzelstunde Deutsch in der 2BFS Kfz.">
+<title>Lehrerhandbuch · Modernes Märchen · Einzelstunde · 2BFS Kfz · Layoutfassung 3</title>
+<style>
+:root{
+  --ink:#17212b; --muted:#5d6873; --line:#cfd8df; --paper:#fff;
+  --navy:#173b5e; --blue:#1f5d8f; --blue-soft:#eaf3fb;
+  --green:#3d7149; --green-soft:#edf7ef; --orange:#96500d; --orange-soft:#fff2e5;
+  --red:#8a2e2e; --red-soft:#fff0f0; --purple:#64487c; --purple-soft:#f3eef8;
+}
+*{box-sizing:border-box}
+html{background:#e9edf1}
+body{margin:0;color:var(--ink);font-family:Arial,Helvetica,sans-serif;font-size:10.4pt;line-height:1.37;counter-reset:page}
+.page{position:relative;width:210mm;min-height:297mm;margin:10mm auto;background:#fff;padding:15mm 15mm 17mm;box-shadow:0 4px 20px rgba(0,0,0,.12);page-break-after:always;break-after:page;counter-increment:page;overflow:hidden}
+.page.landscape{width:297mm;min-height:210mm;padding:12mm 12mm 15mm;page:landscape}
+.header{display:flex;justify-content:space-between;align-items:flex-start;border-bottom:2px solid var(--navy);padding-bottom:3.5mm;margin-bottom:5mm}
+.kicker{font-size:7.8pt;letter-spacing:.06em;text-transform:uppercase;color:var(--blue);font-weight:700}
+h1{font-size:27pt;line-height:1.05;margin:0;color:var(--navy)}
+h2{font-size:18pt;line-height:1.1;margin:1mm 0 0;color:var(--navy)}
+h3{font-size:12pt;margin:0 0 2mm;color:var(--navy)}
+p{margin:1.5mm 0}
+ul,ol{margin:1.5mm 0 1.5mm 5mm;padding-left:3mm}
+li{margin:.8mm 0}
+.meta{font-size:8.2pt;color:var(--muted);text-align:right;max-width:68mm}
+.note{color:var(--muted);font-size:9pt}
+.box{border:1px solid var(--line);border-left:4px solid var(--navy);padding:3.2mm 4mm;margin:3mm 0;break-inside:avoid}
+.box.blue{background:var(--blue-soft);border-left-color:var(--blue)}
+.box.green{background:var(--green-soft);border-left-color:var(--green)}
+.box.orange{background:var(--orange-soft);border-left-color:var(--orange)}
+.box.red{background:var(--red-soft);border-left-color:var(--red)}
+.box.purple{background:var(--purple-soft);border-left-color:var(--purple)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:4mm}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:3mm}
+.table{width:100%;border-collapse:collapse;margin:2mm 0;table-layout:fixed}
+.table th,.table td{border:1px solid #aebbc6;padding:2.2mm;vertical-align:top}
+.table th{background:#e8eff5;color:#173b5e;text-align:left}
+.table.small{font-size:8.6pt;line-height:1.25}
+.table.tiny{font-size:7.6pt;line-height:1.18}
+.phase{font-weight:700;color:var(--blue)}
+.badge{display:inline-block;border-radius:10px;padding:.6mm 2mm;background:var(--navy);color:white;font-weight:700;font-size:7.5pt}
+.callout{border:1px solid #d6b889;background:#fff8ea;padding:3mm 4mm;margin:3mm 0;break-inside:avoid}
+.footer{position:absolute;left:15mm;right:15mm;bottom:7mm;border-top:1px solid var(--line);padding-top:2mm;display:flex;justify-content:space-between;color:var(--muted);font-size:7.5pt}
+.landscape .footer{left:12mm;right:12mm;bottom:6mm}
+.pageno::after{content:counter(page)}
+.cover{min-height:250mm;display:flex;flex-direction:column;justify-content:center}
+.cover .stripe{width:38mm;height:3mm;background:var(--orange);margin:5mm 0}
+.facts{display:grid;grid-template-columns:35mm 1fr;gap:2mm 4mm;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:4mm 0;margin-top:8mm;max-width:170mm}
+.facts b{color:var(--navy)}
+.material-label{display:inline-block;padding:1mm 2mm;border:1px solid var(--blue);color:var(--blue);font-weight:700;font-size:8pt;margin-right:1mm}
+.checklist{display:grid;grid-template-columns:1fr 1fr;gap:2mm 5mm}
+.checkitem::before{content:'☐';margin-right:2mm;font-weight:700}
+.board{border:2px solid #4b5660;background:#fcfcfb;padding:4mm;min-height:65mm;font-family:"Courier New",monospace;white-space:pre-line}
+.poem-title{font-family:Georgia,"Times New Roman",serif;font-weight:700;font-size:14pt;margin-bottom:3mm}
+.poem-table{width:100%;border-collapse:collapse;table-layout:fixed;border:1px solid #c9c9c9;background:#faf9f6;margin:2mm 0 4mm;font-family:Georgia,"Times New Roman",serif;font-size:7.35pt;line-height:1.42}
+.poem-table col.lncol{width:5.2mm}
+.poem-table col.schemecol{width:8.5mm}
+.poem-table td{border:0;padding:.35mm .55mm;vertical-align:baseline;overflow:hidden;max-width:0}
+.poem-table td.ln{font-family:Arial,Helvetica,sans-serif;color:#777;font-size:6.8pt;text-align:right;padding-right:.7mm;white-space:nowrap}
+.poem-table td.vtext{white-space:normal;overflow-wrap:normal;word-break:normal;hyphens:none}
+.poem-table td.scheme{font-family:Arial,Helvetica,sans-serif;text-align:center;white-space:nowrap;padding-left:.5mm;padding-right:.5mm}
+.poem-table .blankline{display:block;width:100%;height:3mm;border-bottom:1px solid #777}
+.poem-table .answerletter{font-weight:700;color:var(--red);font-size:8pt;display:block;text-align:center}
+.poem-table td.sep{border-left:2mm solid #faf9f6}
+
+.task{border-top:1px solid var(--line);padding-top:2.5mm;margin-top:3mm;break-inside:avoid}
+.taskhead{font-weight:700;color:var(--navy);margin-bottom:1.5mm}
+.write-lines{background:repeating-linear-gradient(to bottom,transparent 0,transparent 7mm,#c7cfd5 7.1mm,#c7cfd5 7.35mm);min-height:22mm;margin-top:2mm}
+.write-lines.small{min-height:14mm}
+.response-box{border:1px solid #aebbc6;min-height:18mm;padding:2mm;margin-top:1.5mm}
+.response-box.filled{background:#fffdf5;color:#4f2a00}
+.term-grid{display:grid;grid-template-columns:31mm 1fr;gap:1mm 3mm;font-size:8.8pt}
+.term-grid b{color:var(--navy)}
+.help-grid{display:grid;grid-template-columns:1fr 1fr;gap:5mm}
+.help-card{border:2px dashed #8a9aa6;padding:4mm;min-height:74mm;break-inside:avoid}
+.help-card h3{border-bottom:1px solid var(--line);padding-bottom:2mm}
+.cut{color:#8a9aa6;text-align:center;font-size:7pt;letter-spacing:.08em;margin:2mm 0}
+.source{font-size:7.2pt;color:#5f6670;margin-top:2mm}
+.answer{color:#7a2e00;font-weight:700}
+.teacher-only{background:#f4f6f8;border:1px solid #c8d0d8;padding:3mm}
+.student-head{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:6mm;align-items:start;border-bottom:2px solid var(--green);padding-bottom:2.5mm;margin-bottom:4mm}
+.student-head>div:first-child{min-width:0}
+.student-head h2{color:var(--green);font-size:13.5pt;line-height:1.08;white-space:nowrap}
+.name-line{font-size:8.5pt;color:#555;min-width:35mm}
+.iconrow{display:flex;gap:3mm;flex-wrap:wrap;margin-top:3mm}
+.icon{border:1px solid var(--line);padding:1.5mm 2.5mm;background:#fafafa;font-size:8pt}
+
+
+@page{size:A4;margin:0}
+@page landscape{size:A4 landscape;margin:0}
+@media print{
+  html,body{background:#fff}
+  .poem-table{page-break-inside:avoid;break-inside:avoid}
+  .poem-table td{overflow:hidden!important}
+  .page{margin:0;box-shadow:none}
+}
+</style>
+</head>
+<body>
+
+<section class="page">
+  <div class="cover">
+    <div class="kicker">Deutsch · Gewerbliche 2BFS Kfz · 1. Jahr · Einzelstunde mit vollständigem Material</div>
+    <div class="stripe"></div>
+    <h1>„Modernes Märchen“:<br>Form, Wirkung und Titel</h1>
+    <div style="font-size:15pt;color:var(--muted);margin-top:4mm">Erich Kästner · 45 Minuten · Fortsetzung der Unterrichtseinheit</div>
+    <div class="facts">
+      <b>Ausgangslage</b><span>Textgattungen und Loriots „Feierabend“ wurden behandelt. Der Inhalt von Kästners „Modernes Märchen“ ist bereits erschlossen.</span>
+      <b>Leitfrage</b><span>Warum klingt eine schwierige Lebensgeschichte wie ein geordnetes Märchen?</span>
+      <b>Stundenziel</b><span>Die Lernenden bestimmen das durchgängige Paarreimschema und erklären mit einem Textbeleg, wie die regelmäßige, spielerische Form zum widersprüchlichen Inhalt und zum Titel beiträgt.</span>
+      <b>Material</b><span>Lehrkraftteil, Verlaufsplan, Text- und Aufgabenblatt, vier gestufte Hilfekarten, vollständig ausgefüllte Musterlösung.</span>
+      <b>Schülerbuch</b><span>Nicht erforderlich. Der Gedichttext und alle Arbeitsaufträge sind im Material enthalten.</span>
+    </div>
+    <div class="box orange" style="max-width:170mm;margin-top:10mm">
+      <strong>Didaktische Entscheidung:</strong> Die ursprünglich als Doppelstunde vorgesehene Behandlung wird für diese Einzelstunde fokussiert. Da der Inhalt bereits bekannt ist, entfallen eine erneute ausführliche Inhaltserschließung und das zeitaufwendige Standbild. Im Zentrum steht die anspruchsvollere Verbindung von <b>Form, Inhalt, Wirkung und Titeldeutung</b>.
+    </div>
+    <div class="box red" style="max-width:170mm">
+      <strong>Hinweis zum Textabdruck:</strong> Der Gedichttext wird ausschließlich für die konkrete Lerngruppe als Unterrichtsmaterial bereitgestellt. Nicht öffentlich hochladen oder außerhalb des zulässigen schulischen Nutzungsrahmens verbreiten.
+    </div>
+  </div>
+  <div class="footer"><span>Lehrerhandbuch · „Modernes Märchen“ · 2BFS Kfz</span><span>Seite <span class="pageno"></span></span></div>
+</section>
+
+<section class="page">
+  <div class="header"><div><div class="kicker">Lehrkraftmaterial</div><h2>1. Bedingungs- und didaktische Analyse</h2><div class="note">Klafki als Planungsrahmen</div></div><div class="meta">Fortsetzungsstunde nach bereits erfolgter Inhaltserschließung</div></div>
+  <div class="grid2">
+    <div class="box blue"><h3>Bekannte Voraussetzungen</h3><ul>
+      <li>Die drei Hauptgattungen wurden bereits thematisiert.</li>
+      <li>Loriots „Feierabend“ wurde als dramatischer Text erschlossen.</li>
+      <li>Die Handlung und Entwicklung des Paars in „Modernes Märchen“ sind bekannt.</li>
+      <li>Die Lernenden verfügen über kein Lehrbuch; der Text muss vollständig vorliegen.</li>
+    </ul></div>
+    <div class="box red"><h3>Zu prüfende Voraussetzungen</h3><ul>
+      <li>Kann die Entwicklung arm/glücklich – reich/unglücklich knapp erinnert werden?</li>
+      <li>Sind die Begriffe Vers und Strophe verfügbar?</li>
+      <li>Können Endwörter laut verglichen werden?</li>
+      <li>Wer benötigt sprachliche Hilfen für eine Deutung?</li>
+    </ul></div>
+  </div>
+  <div class="box"><h3>Bildungsabsicht</h3><p>Die Lernenden sollen erkennen, dass ein literarischer Text seine Aussage nicht nur durch das „Was“, sondern auch durch das „Wie“ erzeugt. Sie erfahren exemplarisch, dass eine geordnete, leicht klingende Form schwierige Lebensverhältnisse nicht bloß verschönert, sondern einen ironischen Widerspruch sichtbar machen kann. Dadurch üben sie, Wahrnehmung, Textbeleg und Deutung voneinander zu unterscheiden.</p></div>
+  <div class="grid2">
+    <div class="box green"><h3>Exemplarische Bedeutung</h3><ul><li>Form und Inhalt können zusammenpassen oder in Spannung stehen.</li><li>Deutungen sind offen, müssen aber am Text belegt werden.</li><li>Ein Titel kann Erwartungen wecken und zugleich brechen.</li></ul></div>
+    <div class="box green"><h3>Gegenwarts- und Zukunftsbedeutung</h3><ul><li>Leichte, unterhaltsame Formen können ernste Inhalte transportieren.</li><li>Auch in Werbung, Musik und sozialen Medien beeinflusst Gestaltung die Wahrnehmung.</li><li>Beruflich und privat müssen Aussagen aus konkreten Signalen begründet werden.</li></ul></div>
+    <div class="box orange"><h3>Thematische Struktur</h3><ul><li>durchgängiger Paarreim</li><li>fünf vierzeilige Strophen und verkürzte Schlussstrophe</li><li>märchenhafte Formel im Schluss</li><li>Kontrast: geordnete Form – widersprüchliche Lebensentwicklung</li><li>ironische Titeldeutung</li></ul></div>
+    <div class="box purple"><h3>Erweisbarkeit</h3><ul><li>Reimpaare korrekt markieren</li><li>Paarreim benennen</li><li>mindestens einen Form-Inhalt-Kontrast mit Textbeleg erklären</li><li>Titel in einem begründeten Deutungssatz erfassen</li></ul></div>
+  </div>
+  <div class="callout"><strong>Rosa – Situation statt Konstellation:</strong> Das Bestimmen des Reimschemas ist zunächst eine Konstellation. Zur Urteilssituation wird die Stunde erst, wenn die Lernenden entscheiden und begründen, ob die regelmäßige Form die Lebensgeschichte harmonisch unterstützt, sie beschönigt oder ironisch bricht. Mehrere begründete Lesarten bleiben möglich.</div>
+  <div class="footer"><span>Lehrerhandbuch · „Modernes Märchen“ · 2BFS Kfz</span><span>Seite <span class="pageno"></span></span></div>
+</section>
+
+<section class="page">
+  <div class="header"><div><div class="kicker">Lehrkraftmaterial</div><h2>2. Stundenprofil, Vorbereitung und Erfolgskriterien</h2><div class="note">Fokus auf eine realistische Einzelstunde</div></div><div class="meta">45 Minuten</div></div>
+  <div class="box blue"><h3>Beobachtbares Stundenziel</h3><p>Die Lernenden bestimmen am Gedicht das durchgängige Paarreimschema und verfassen einen Deutungssatz, in dem sie <b>eine Beobachtung zur Form</b>, <b>einen Textbeleg</b> und <b>eine Erklärung der Wirkung</b> miteinander verbinden.</p></div>
+  <div class="grid2">
+    <div>
+      <h3>Erfolgskriterien für die Lernenden</h3>
+      <div class="checklist">
+        <div class="checkitem">Ich ordne gleichen Endreimen denselben Buchstaben zu.</div>
+        <div class="checkitem">Ich benenne das Reimschema als Paarreim.</div>
+        <div class="checkitem">Ich nenne einen Gegensatz zwischen Form und Inhalt.</div>
+        <div class="checkitem">Ich belege meine Aussage mit Versen oder Zeilen.</div>
+        <div class="checkitem">Ich erkläre, wie die Gestaltung wirkt.</div>
+        <div class="checkitem">Ich deute den Titel in einem vollständigen Satz.</div>
+      </div>
+    </div>
+    <div class="box green"><h3>Benötigte Materialien</h3><ul>
+      <li><span class="material-label">M1</span> Text- und Aufgabenblatt, je 1 Exemplar</li>
+      <li><span class="material-label">H1–H4</span> Hilfekarten, ausgeschnitten oder gefaltet</li>
+      <li><span class="material-label">L1</span> Musterlösung / Erwartungshorizont</li>
+      <li>Tafel oder Dokumentenkamera</li>
+      <li>zwei Textmarker oder Buntstifte pro Person</li>
+    </ul></div>
+  </div>
+  <h3 style="margin-top:5mm">Antizipierte Schwierigkeiten und Reaktionen</h3>
+  <table class="table small">
+    <tr><th>Hürde</th><th>Diagnostisches Signal</th><th>Reaktion</th></tr>
+    <tr><td>Reim und Reimschema werden verwechselt.</td><td>„verliebt/gibt“ wird genannt, aber kein Buchstabenschema gebildet.</td><td>H1: erst Endwörter einkreisen, dann gleiche Endungen mit gleichem Buchstaben versehen.</td></tr>
+    <tr><td>Formanalyse bleibt reines Abzählen.</td><td>Nur „aabb“ ohne Aussage zur Wirkung.</td><td>Leitfrage: „Wie klingt ein regelmäßig gereimter Text – und passt das zu Armut und Enge?“</td></tr>
+    <tr><td>„Geld macht unglücklich“ wird vorschnell als einzige Aussage gesetzt.</td><td>Keine Belege oder keine Berücksichtigung der Fantasie/Armut.</td><td>Stärkere Lernende prüfen Gegenbelege und formulieren vorsichtiger: „Das Gedicht stellt Reichtum nicht als sichere Glücksgarantie dar.“</td></tr>
+    <tr><td>Sprachliche Unsicherheit bei der Deutung.</td><td>Stichworte statt zusammenhängender Erklärung.</td><td>H4 mit Dreischritt Beobachtung – Beleg – Erklärung.</td></tr>
+  </table>
+  <div class="grid2">
+    <div class="box orange"><h3>Minimalfahrplan</h3><ol><li>Inhalt in drei Stationen aktivieren.</li><li>Reimpaare markieren und Paarreim sichern.</li><li>Einen Form-Inhalt-Kontrast herausarbeiten.</li><li>Titel in einem Satz deuten.</li></ol></div>
+    <div class="box red"><h3>Notausstieg</h3><p>Bei Zeitverlust entfällt die Partner-Rückmeldung. Die Lehrkraft sichert gemeinsam den Paarreim und lässt als verbindliches Abschlussprodukt nur Aufgabe 3b schreiben: „Der Titel ist …, weil …“</p></div>
+  </div>
+  <div class="footer"><span>Lehrerhandbuch · „Modernes Märchen“ · 2BFS Kfz</span><span>Seite <span class="pageno"></span></span></div>
+</section>
+
+<section class="page landscape">
+  <div class="header"><div><div class="kicker">Lehrkraftmaterial · Verlaufsplan</div><h2>3. Einzelstunde: Warum klingt die Geschichte wie ein Märchen?</h2><div class="note">Form – Inhalt – Wirkung – Titel</div></div><div class="meta">45 Minuten · Stundenziel: Paarreim bestimmen und die Spannung zwischen regelmäßiger Form und widersprüchlichem Inhalt textgestützt erklären.</div></div>
+  <table class="table tiny">
+    <colgroup><col style="width:14mm"><col style="width:27mm"><col style="width:68mm"><col style="width:54mm"><col style="width:18mm"><col style="width:45mm"><col style="width:55mm"></colgroup>
+    <thead><tr><th>Zeit</th><th>Phase / Funktion</th><th>Lehrkraft: Impuls und Steuerung</th><th>Lernaktivität / Denkleistung</th><th>SF</th><th>Material / Sicherung</th><th>Differenzierung, Risiken, Übergang</th></tr></thead>
+    <tbody>
+      <tr><td>0–5</td><td class="phase">Aktivierung<br><span class="note">Vorwissen bündeln</span></td><td>Drei Aussagen ungeordnet zeigen: „arm und verliebt“ – „reich und unglücklich“ – „Geld verschenkt“. Auftrag: „Bringt die Entwicklung in eine sinnvolle Reihenfolge und ergänzt zu jeder Station ein passendes Stichwort.“ Danach Leitfrage sichtbar machen.</td><td>Reihenfolge herstellen; Inhalt knapp reaktivieren; Widerspruch wahrnehmen.</td><td>EA → PA</td><td>Tafel / Folie<br><b>Sicherung:</b> drei Pfeilstationen</td><td>Kein erneutes ausführliches Nacherzählen. Bei Unsicherheit dürfen Zeilen 1–22 kurz überflogen werden. Übergang: „Heute untersuchen wir, wie diese Entwicklung klingt.“</td></tr>
+      <tr><td>5–9</td><td class="phase">Erneute Textbegegnung<br><span class="note">Klang wahrnehmen</span></td><td>Gedicht ausdrucksstark vorlesen. Hörfrage: „Was fällt euch am Klang und an den Zeilenenden auf?“ Zwei spontane Beobachtungen sammeln, noch nicht bewerten.</td><td>Hören; erste Formbeobachtung äußern.</td><td>PL</td><td><span class="material-label">M1</span> Gedichtblatt</td><td>Wortklärungen nur bei Bedarf: Konfekt, dergleichen, Heiterkeit. Keine lange Begriffserklärung.</td></tr>
+      <tr><td>9–20</td><td class="phase">Formanalyse<br><span class="note">Werkzeug aufbauen</span></td><td>Aufgabe 1 erläutern. Partner A bearbeitet Z. 1–12, Partner B Z. 13–22; anschließend Abgleich. Lehrkraft diagnostiziert: Endwort – Reimpaar – Buchstabe.</td><td>Endwörter markieren; Buchstaben vergeben; Strophenbau beschreiben; Reimschema benennen.</td><td>EA → PA</td><td><span class="material-label">M1</span> Aufgabe 1<br><span class="material-label">H1</span> bei Bedarf</td><td>Basis: erste zwei Reimpaare vormarkiert. Erweiterung: Wirkung der verkürzten Schlussstrophe vermuten. Übergang: „Die Form ist sehr geordnet. Ist das Leben des Paars genauso?“</td></tr>
+      <tr><td>20–25</td><td class="phase">Zwischensicherung<br><span class="note">Begriffe klären</span></td><td>Gemeinsame Sicherung: durchgängiger Paarreim; fünf Vierzeiler plus Schlusszweizeiler. Ein Beispiel an der Tafel. Fehler nicht nur korrigieren, sondern Begründung einfordern.</td><td>Ergebnis prüfen und korrigieren; Fachbegriffe präzisieren.</td><td>UG</td><td>Tafelbild Teil 1</td><td>Die vollständige Buchstabenfolge muss nicht abgeschrieben werden; entscheidend ist das Prinzip. Bei Zeitnot direkt zu Aufgabe 2.</td></tr>
+      <tr><td>25–35</td><td class="phase">Vertiefung<br><span class="note">Form und Inhalt verknüpfen</span></td><td>Aufgabe 2: Tabelle mit zwei Beobachtungen füllen. Impulsfragen: „Wie klingt die Form?“ – „Welche Lebensumstände stehen daneben?“ – „Welche Wirkung entsteht?“ Lehrkraft fordert Textbeleg.</td><td>Kontraste auswählen; Wirkungshypothese formulieren; Beleg zuordnen.</td><td>PA</td><td><span class="material-label">M1</span> Aufgabe 2<br><span class="material-label">H2/H3</span></td><td>Gemeinsame anspruchsvolle Aufgabe, Hilfen gestuft. Erweiterung: These „Geld ist das Problem“ prüfen und einschränken. Übergang: „Der Titel verspricht ein Märchen. Erfüllt der Text dieses Versprechen?“</td></tr>
+      <tr><td>35–42</td><td class="phase">Urteilssituation<br><span class="note">Titel deuten</span></td><td>Aufgabe 3 einzeln. Wahl: „Der Titel ist passend“ / „Der Titel ist ironisch“ / eigene differenzierte Position. Verbindlich: Beobachtung + Beleg + Erklärung. Danach 60-Sekunden-Partnercheck.</td><td>Deutung formulieren; fachlich begründen; Rückmeldung anhand der drei Bausteine geben.</td><td>EA → PA</td><td><span class="material-label">M1</span> Aufgabe 3<br><span class="material-label">H4</span></td><td>Mehrere Positionen zulassen, sofern textgestützt. Keine bloße Geschmacksbewertung. Notausstieg: Partnercheck streichen.</td></tr>
+      <tr><td>42–45</td><td class="phase">Sicherung / Diagnose<br><span class="note">Lernziel sichtbar</span></td><td>Zwei Sätze anonym vorlesen oder sammeln. Exit-Ticket: „Die geordnete Form wirkt …, obwohl …“ beziehungsweise „Der Titel ist …, weil …“</td><td>Kernsatz fertigstellen; eigenen Lernstand prüfen.</td><td>EA / PL</td><td>Unterer Rand von M1 oder Heft</td><td>Lehrkraft sortiert nach: Form erkannt – Beleg vorhanden – Wirkung erklärt. Diese Diagnose entscheidet über Wiederholung zu Beginn der nächsten Stunde.</td></tr>
+    </tbody>
+  </table>
+  <div class="callout"><strong>Puffer/Vertiefung (bei schneller Lerngruppe):</strong> Kurze Diskussion: „Ist Reichtum im Gedicht wirklich die Ursache des Unglücks – oder kritisiert der Text eher einfache Märchenlösungen?“ Nur mit Bezug auf mindestens zwei Textstellen.</div>
+  <div class="footer"><span>Lehrerhandbuch · „Modernes Märchen“ · Verlaufsplan</span><span>Seite <span class="pageno"></span></span></div>
+</section>
+
+<section class="page">
+  <div class="header"><div><div class="kicker">Lehrkraftmaterial</div><h2>4. Unterrichtsführung, Tafelbild und Nachbereitung</h2><div class="note">Konkrete Umsetzung ohne Schülerbuch</div></div><div class="meta">M1 vor Stundenbeginn austeilen</div></div>
+  <div class="grid2">
+    <div>
+      <h3>Vorgeschlagene Moderation</h3>
+      <div class="teacher-only"><b>Einstieg:</b> „Den Inhalt kennen wir schon. Heute untersuchen wir etwas Schwierigeres: Warum wirkt diese harte Lebensgeschichte beim Hören so geordnet und fast leicht?“<br><br>
+      <b>Nach der Formanalyse:</b> „Ein Paarreim sagt zunächst nur, welche Zeilen sich reimen. Jetzt kommt die literarische Frage: Was bewirkt diese Ordnung?“<br><br>
+      <b>Vor der Titeldeutung:</b> „Ein Märchen verspricht normalerweise eine Lösung. Prüft, ob Kästner dieses Versprechen erfüllt oder damit spielt.“</div>
+    </div>
+    <div>
+      <h3>Tafelbild in drei Schritten</h3>
+      <div class="board">LEITFRAGE: Warum klingt eine schwierige Lebensgeschichte wie ein geordnetes Märchen?
+
+1. FORM
+Paarreim: aabb / ccdd / …
+5 vierzeilige Strophen + Schlusszweizeiler
+regelmäßig · geordnet · leicht merkbar
+
+2. INHALT
+arm + verliebt → reich + unglücklich → Geld weg
+Armut, Enge, Fantasie, Erfolg, Enttäuschung
+
+3. DEUTUNG
+Die regelmäßige Form wirkt __________,
+obwohl der Inhalt __________.
+Dadurch erscheint der Titel „Modernes Märchen“ __________.</div>
+    </div>
+  </div>
+  <h3 style="margin-top:5mm">Fachliche Hinweise für die Lehrkraft</h3>
+  <div class="grid2">
+    <div class="box blue"><h3>Reim und Bau</h3><p>Das Gedicht arbeitet durchgängig mit Paarreimen. Die ersten fünf Strophen bestehen aus je vier Versen; die Schlussstrophe verkürzt die bekannte Märchenformel „Und wenn sie nicht gestorben sind …“ auf zwei Verse. Diese Verkürzung kann als pointierter, offener oder ironischer Abschluss gelesen werden.</p></div>
+    <div class="box orange"><h3>Keine Einheitsdeutung erzwingen</h3><p>Die Form kann als spielerische Entlastung, als Beschönigung oder als ironischer Kontrast gedeutet werden. Entscheidend ist nicht das Etikett, sondern der nachvollziehbare Dreischritt aus Beobachtung, Beleg und Erklärung.</p></div>
+    <div class="box green"><h3>Sprachlich sensible Präzision</h3><p>Statt „Geld macht unglücklich“ besser: „Das Gedicht stellt Reichtum nicht als sichere Garantie für Glück dar.“ So wird vermieden, aus einer poetischen Pointe eine allgemeingültige Tatsachenbehauptung zu machen.</p></div>
+    <div class="box purple"><h3>Kritischer Kontext</h3><p>Formulierungen wie „Sie schenkte ihm Kinder“ spiegeln eine ältere, patriarchal geprägte Perspektive. Das kann bei Bedarf knapp markiert werden, sollte in dieser fokussierten Stunde aber nicht ohne Zeit für eine sachgerechte Auseinandersetzung zum Nebenthema werden.</p></div>
+  </div>
+  <div class="box red"><h3>Nachbereitung in zwei Minuten</h3><p>Exit-Tickets in drei Stapel sortieren: <b>A</b> Form + Beleg + Wirkung vorhanden; <b>B</b> Form erkannt, Wirkung nur behauptet; <b>C</b> Reimschema noch unsicher. Zu Beginn der nächsten Stunde genügt je nach Ergebnis eine dreiminütige Modellierung oder eine gezielte Kleingruppenhilfe.</p></div>
+  <div class="footer"><span>Lehrerhandbuch · „Modernes Märchen“ · 2BFS Kfz</span><span>Seite <span class="pageno"></span></span></div>
+</section>
+
+<section class="page">
+  <div class="student-head"><div><div class="kicker" style="color:var(--green)">Schülermaterial M1 · Deutsch · 2BFS Kfz · 1. Jahr</div><h2>Erich Kästner: „Modernes Märchen“ – Form und Wirkung</h2></div><div class="name-line">Name: ____________________<br>Datum: ____________________</div></div>
+  <div class="box green" style="margin-top:0"><strong>Leitfrage:</strong> Warum klingt eine schwierige Lebensgeschichte wie ein geordnetes Märchen?</div>
+  <div class="poem-title">Erich Kästner: Modernes Märchen (1936)</div>
+  <table class="poem-table" aria-label="Gedicht mit Feldern für das Reimschema"><colgroup><col class="lncol"><col><col class="schemecol"><col class="lncol"><col><col class="schemecol"></colgroup><tbody><tr><td class="ln">1</td><td class="vtext">Sie waren so sehr ineinander verliebt,</td><td class="scheme"><span class="blankline"></span></td><td class="ln sep">13</td><td class="vtext">Und aßen Brot, als wär’s Konfekt,</td><td class="scheme"><span class="blankline"></span></td></tr><tr><td class="ln">2</td><td class="vtext">wie es das nur noch in Büchern gibt.</td><td class="scheme"><span class="blankline"></span></td><td class="ln sep">14</td><td class="vtext">und spielten: Wie Gänsebraten schmeckt.</td><td class="scheme"><span class="blankline"></span></td></tr><tr><td class="ln">3</td><td class="vtext">Sie hatte kein Geld. Und er hatte keins.</td><td class="scheme"><span class="blankline"></span></td><td class="ln sep">15</td><td class="vtext">Dergleichen stärkt wohl die Fantasie.</td><td class="scheme"><span class="blankline"></span></td></tr><tr><td class="ln">4</td><td class="vtext">Da machten sie Hochzeit und lachten sich eins.</td><td class="scheme"><span class="blankline"></span></td><td class="ln sep">16</td><td class="vtext">Drum wurde der Mann, blitzblatz! ein Genie.</td><td class="scheme"><span class="blankline"></span></td></tr><tr><td class="ln">5</td><td class="vtext">Er war ohne Amt. So blieben sie arm.</td><td class="scheme"><span class="blankline"></span></td><td class="ln sep">17</td><td class="vtext">Schrieb schöne Romane. Verdiente viel Geld</td><td class="scheme"><span class="blankline"></span></td></tr><tr><td class="ln">6</td><td class="vtext">Und speisten zweimal in der Woche warm.</td><td class="scheme"><span class="blankline"></span></td><td class="ln sep">18</td><td class="vtext">und wurde der reichste Mann auf der Welt.</td><td class="scheme"><span class="blankline"></span></td></tr><tr><td class="ln">7</td><td class="vtext">Er nannte sie trotzdem: „Mein Schmetterling.“</td><td class="scheme"><span class="blankline"></span></td><td class="ln sep">19</td><td class="vtext">Erst waren sie stolz. Doch dann tat’s ihnen leid,</td><td class="scheme"><span class="blankline"></span></td></tr><tr><td class="ln">8</td><td class="vtext">Sie schenkte ihm Kinder, so oft es nur ging.</td><td class="scheme"><span class="blankline"></span></td><td class="ln sep">20</td><td class="vtext">denn der Reichtum schadet der Heiterkeit.</td><td class="scheme"><span class="blankline"></span></td></tr><tr><td class="ln">9</td><td class="vtext">Sie wohnten möbliert und waren nie krank.</td><td class="scheme"><span class="blankline"></span></td><td class="ln sep">21</td><td class="vtext">Sie schenkten das Geld einem Waisenkind.</td><td class="scheme"><span class="blankline"></span></td></tr><tr><td class="ln">10</td><td class="vtext">Die Kinder schliefen im Kleiderschrank.</td><td class="scheme"><span class="blankline"></span></td><td class="ln sep">22</td><td class="vtext">Und wenn sie nicht gestorben sind …</td><td class="scheme"><span class="blankline"></span></td></tr><tr><td class="ln">11</td><td class="vtext">Zu Weihnachten malten sie kurzerhand</td><td class="scheme"><span class="blankline"></span></td><td class="ln sep"></td><td class="vtext"></td><td class="scheme"></td></tr><tr><td class="ln">12</td><td class="vtext">Geschenke mit Buntstiften an die Wand.</td><td class="scheme"><span class="blankline"></span></td><td class="ln sep"></td><td class="vtext"></td><td class="scheme"></td></tr></tbody></table></div>
+  <div class="source">Textgrundlage: Erich Kästner, „Modernes Märchen“ (1936), nach dem vom Lehrer bereitgestellten Schulbuchauszug. Nur für den Unterricht in dieser Lerngruppe; nicht öffentlich verbreiten.</div>
+  <div class="task">
+    <div class="taskhead">1 · Das Reimschema bestimmen <span class="badge">AFB I/II</span></div>
+    <ol>
+      <li>Unterstreiche die Endwörter, die sich reimen.</li>
+      <li>Schreibe neben die Verse Buchstaben: Gleicher Reim = gleicher Buchstabe; neuer Reim = neuer Buchstabe.</li>
+      <li>Ergänze: Das Gedicht verwendet überwiegend den ____________________. Die ersten fünf Strophen haben jeweils ______ Verse; die letzte Strophe hat ______ Verse.</li>
+    </ol>
+  </div>
+  <div class="task">
+    <div class="taskhead">2 · Form und Inhalt verbinden <span class="badge">AFB II</span></div>
+    <table class="table small"><tr><th>Beobachtung zur Form oder Sprache</th><th>Passende Stelle / Inhalt</th><th>Mögliche Wirkung oder Bedeutung</th></tr>
+      <tr><td style="height:20mm"></td><td></td><td></td></tr>
+      <tr><td style="height:20mm"></td><td></td><td></td></tr>
+    </table>
+  </div>
+  <div class="footer"><span>Schülermaterial M1 · „Modernes Märchen“</span><span>Seite <span class="pageno"></span></span></div>
+</section>
+
+<section class="page">
+  <div class="student-head"><div><div class="kicker" style="color:var(--green)">Schülermaterial M1 · Fortsetzung</div><h2>Titel deuten und Ergebnis sichern</h2></div><div class="name-line">Name: ____________________</div></div>
+  <div class="task" style="border-top:0;margin-top:0">
+    <div class="taskhead">3 · Den Titel „Modernes Märchen“ deuten <span class="badge">AFB III</span></div>
+    <p>Entscheide dich für eine Position oder formuliere eine eigene:</p>
+    <div class="iconrow"><div class="icon">Der Titel ist passend.</div><div class="icon">Der Titel ist ironisch.</div><div class="icon">Der Titel ist zugleich passend und widersprüchlich.</div></div>
+    <p>Schreibe anschließend drei zusammenhängende Sätze. Nutze den Dreischritt:</p>
+    <div class="grid3">
+      <div class="box blue"><b>Beobachtung</b><br>Die Form / der Schluss / der Titel …</div>
+      <div class="box green"><b>Beleg</b><br>Das zeigt sich in den Zeilen …</div>
+      <div class="box orange"><b>Erklärung</b><br>Dadurch wirkt / verdeutlicht der Text …</div>
+    </div>
+    <div class="write-lines" style="min-height:48mm"></div>
+  </div>
+  <div class="task">
+    <div class="taskhead">4 · Partnercheck <span class="badge">2 Minuten</span></div>
+    <div class="checklist">
+      <div class="checkitem">Eine Beobachtung zur Gestaltung ist genannt.</div>
+      <div class="checkitem">Mindestens eine Textstelle wird als Beleg verwendet.</div>
+      <div class="checkitem">Die Wirkung wird erklärt, nicht nur behauptet.</div>
+      <div class="checkitem">Der Titel wird ausdrücklich gedeutet.</div>
+    </div>
+    <p><b>Eine hilfreiche Rückmeldung:</b></p><div class="write-lines small"></div>
+  </div>
+  <div class="task">
+    <div class="taskhead">5 · Exit-Ticket</div>
+    <p>Vervollständige <b>einen</b> Satz:</p>
+    <div class="response-box">Die geordnete Form wirkt ____________________________, obwohl der Inhalt ____________________________.<br><br>Der Titel „Modernes Märchen“ ist ____________________________, weil ____________________________________________.</div>
+  </div>
+  <div class="box purple"><b>Zusatz für Schnelle:</b> Prüfe die Aussage „Das Gedicht zeigt, dass Geld unglücklich macht.“ Formuliere eine genauere Aussage und begründe sie mit zwei Textstellen.</div>
+  <div class="footer"><span>Schülermaterial M1 · „Modernes Märchen“</span><span>Seite <span class="pageno"></span></span></div>
+</section>
+
+<section class="page">
+  <div class="header"><div><div class="kicker">Schülermaterial · gestufte Hilfen</div><h2>H1–H4 · Nur bei Bedarf verwenden</h2><div class="note">Die Karten können ausgeschnitten, gefaltet oder verdeckt ausgelegt werden.</div></div><div class="meta">Hilfen erhalten die Denkleistung</div></div>
+  <div class="help-grid">
+    <div class="help-card"><h3>H1 · Reimschema</h3><ol><li>Lies nur die letzten Wörter der Verse laut.</li><li>Reimen sich zwei Wörter, erhalten sie denselben Buchstaben.</li><li>Beginne mit <b>a</b>. Für einen neuen Klang nimm den nächsten Buchstaben.</li></ol><p><b>Beispiel:</b><br>Haus <span class="answer">a</span><br>Maus <span class="answer">a</span><br>Wind <span class="answer">b</span><br>Kind <span class="answer">b</span></p><p>Das Schema <b>aabb</b> heißt ____________________.</p></div>
+    <div class="help-card"><h3>H2 · Wörter für die Form</h3><div class="term-grid"><b>regelmäßig</b><span>nach einem erkennbaren Muster</span><b>Paarreim</b><span>je zwei aufeinanderfolgende Verse reimen sich</span><b>Strophe</b><span>Abschnitt eines Gedichts</span><b>Schlussformel</b><span>bekannte Formulierung am Ende eines Märchens</span><b>spielerisch</b><span>leicht, überraschend oder scherzhaft gestaltet</span><b>ironisch</b><span>Gemeintes und wörtlich Gesagtes stehen in Spannung</span></div></div>
+    <div class="help-card"><h3>H3 · Form und Inhalt verbinden</h3><p>Frage nacheinander:</p><ol><li><b>Form:</b> Wie klingt der Text durch Reim und Rhythmus?</li><li><b>Inhalt:</b> Welche schwierigen oder widersprüchlichen Erfahrungen werden erzählt?</li><li><b>Wirkung:</b> Passt der Klang dazu? Beschönigt er? Entlastet er? Oder macht der Gegensatz die Aussage erst deutlich?</li></ol><p>Es gibt mehr als eine mögliche Antwort. Entscheidend ist dein Textbeleg.</p></div>
+    <div class="help-card"><h3>H4 · Deutung schreiben</h3><p><b>Beobachtung:</b> Das Gedicht verwendet / Der Schluss erinnert an …</p><p><b>Beleg:</b> Das zeigt sich in Zeile …, wo …</p><p><b>Erklärung:</b> Dadurch wirkt die Geschichte … / Dadurch entsteht ein Gegensatz zu …</p><p><b>Titel:</b> Deshalb ist der Titel „Modernes Märchen“ …</p></div>
+  </div>
+  <div class="cut">✂ · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · ✂</div>
+  <div class="box orange"><strong>Wortschatz bei Bedarf:</strong> <b>Konfekt</b> = feines Süßgebäck; <b>dergleichen</b> = solche Dinge; <b>Heiterkeit</b> = Fröhlichkeit; <b>Waisenkind</b> = Kind, dessen Eltern gestorben sind; <b>möbliert wohnen</b> = in einer Wohnung mit bereits vorhandenen Möbeln leben.</div>
+  <div class="footer"><span>Hilfekarten H1–H4 · „Modernes Märchen“</span><span>Seite <span class="pageno"></span></span></div>
+</section>
+
+<section class="page">
+  <div class="student-head" style="border-color:var(--orange)"><div><div class="kicker" style="color:var(--orange)">Musterlösung L1 · ausgefüllte Fassung von M1</div><h2 style="color:var(--orange)">Erich Kästner: „Modernes Märchen“ – Form und Wirkung</h2></div><div class="name-line">Lehrkraft / Selbstkontrolle</div></div>
+  <div class="box orange" style="margin-top:0"><strong>Leitfrage:</strong> Warum klingt eine schwierige Lebensgeschichte wie ein geordnetes Märchen?</div>
+  <div class="poem-title">Erich Kästner: Modernes Märchen (1936)</div>
+  <table class="poem-table" aria-label="Gedicht mit Feldern für das Reimschema"><colgroup><col class="lncol"><col><col class="schemecol"><col class="lncol"><col><col class="schemecol"></colgroup><tbody><tr><td class="ln">1</td><td class="vtext">Sie waren so sehr ineinander verliebt,</td><td class="scheme"><span class="answerletter">a</span></td><td class="ln sep">13</td><td class="vtext">Und aßen Brot, als wär’s Konfekt,</td><td class="scheme"><span class="answerletter">g</span></td></tr><tr><td class="ln">2</td><td class="vtext">wie es das nur noch in Büchern gibt.</td><td class="scheme"><span class="answerletter">a</span></td><td class="ln sep">14</td><td class="vtext">und spielten: Wie Gänsebraten schmeckt.</td><td class="scheme"><span class="answerletter">g</span></td></tr><tr><td class="ln">3</td><td class="vtext">Sie hatte kein Geld. Und er hatte keins.</td><td class="scheme"><span class="answerletter">b</span></td><td class="ln sep">15</td><td class="vtext">Dergleichen stärkt wohl die Fantasie.</td><td class="scheme"><span class="answerletter">h</span></td></tr><tr><td class="ln">4</td><td class="vtext">Da machten sie Hochzeit und lachten sich eins.</td><td class="scheme"><span class="answerletter">b</span></td><td class="ln sep">16</td><td class="vtext">Drum wurde der Mann, blitzblatz! ein Genie.</td><td class="scheme"><span class="answerletter">h</span></td></tr><tr><td class="ln">5</td><td class="vtext">Er war ohne Amt. So blieben sie arm.</td><td class="scheme"><span class="answerletter">c</span></td><td class="ln sep">17</td><td class="vtext">Schrieb schöne Romane. Verdiente viel Geld</td><td class="scheme"><span class="answerletter">i</span></td></tr><tr><td class="ln">6</td><td class="vtext">Und speisten zweimal in der Woche warm.</td><td class="scheme"><span class="answerletter">c</span></td><td class="ln sep">18</td><td class="vtext">und wurde der reichste Mann auf der Welt.</td><td class="scheme"><span class="answerletter">i</span></td></tr><tr><td class="ln">7</td><td class="vtext">Er nannte sie trotzdem: „Mein Schmetterling.“</td><td class="scheme"><span class="answerletter">d</span></td><td class="ln sep">19</td><td class="vtext">Erst waren sie stolz. Doch dann tat’s ihnen leid,</td><td class="scheme"><span class="answerletter">j</span></td></tr><tr><td class="ln">8</td><td class="vtext">Sie schenkte ihm Kinder, so oft es nur ging.</td><td class="scheme"><span class="answerletter">d</span></td><td class="ln sep">20</td><td class="vtext">denn der Reichtum schadet der Heiterkeit.</td><td class="scheme"><span class="answerletter">j</span></td></tr><tr><td class="ln">9</td><td class="vtext">Sie wohnten möbliert und waren nie krank.</td><td class="scheme"><span class="answerletter">e</span></td><td class="ln sep">21</td><td class="vtext">Sie schenkten das Geld einem Waisenkind.</td><td class="scheme"><span class="answerletter">k</span></td></tr><tr><td class="ln">10</td><td class="vtext">Die Kinder schliefen im Kleiderschrank.</td><td class="scheme"><span class="answerletter">e</span></td><td class="ln sep">22</td><td class="vtext">Und wenn sie nicht gestorben sind …</td><td class="scheme"><span class="answerletter">k</span></td></tr><tr><td class="ln">11</td><td class="vtext">Zu Weihnachten malten sie kurzerhand</td><td class="scheme"><span class="answerletter">f</span></td><td class="ln sep"></td><td class="vtext"></td><td class="scheme"></td></tr><tr><td class="ln">12</td><td class="vtext">Geschenke mit Buntstiften an die Wand.</td><td class="scheme"><span class="answerletter">f</span></td><td class="ln sep"></td><td class="vtext"></td><td class="scheme"></td></tr></tbody></table></div>
+  <div class="source">Die Buchstaben zeigen eine mögliche fortlaufende Kennzeichnung. Entscheidend ist das Muster aus jeweils zwei gleich gereimten Versen.</div>
+  <div class="task">
+    <div class="taskhead">1 · Das Reimschema bestimmen – Lösung</div>
+    <p>Das Gedicht verwendet überwiegend den <span class="answer">Paarreim</span>. Die ersten fünf Strophen haben jeweils <span class="answer">vier</span> Verse; die letzte Strophe hat <span class="answer">zwei</span> Verse. Das Schema lautet fortlaufend: <span class="answer">aabb · ccdd · eeff · gghh · iijj · kk</span>.</p>
+  </div>
+  <div class="task">
+    <div class="taskhead">2 · Form und Inhalt verbinden – mögliche Lösung</div>
+    <table class="table small"><tr><th>Beobachtung zur Form oder Sprache</th><th>Passende Stelle / Inhalt</th><th>Mögliche Wirkung oder Bedeutung</th></tr>
+      <tr><td class="answer">Der durchgängige Paarreim ist regelmäßig und leicht hörbar.</td><td class="answer">z. B. „verliebt / gibt“ und „keins / eins“ (Z. 1–4), obwohl Armut und Geldmangel genannt werden.</td><td class="answer">Die geordnete, leichte Form steht in Spannung zu den schwierigen Lebensumständen. Der ernste Inhalt wirkt dadurch spielerisch oder ironisch gebrochen.</td></tr>
+      <tr><td class="answer">Die letzte Strophe greift die bekannte Märchenformel auf, bleibt aber sehr kurz und offen.</td><td class="answer">„Und wenn sie nicht gestorben sind …“ (Z. 22); zuvor verschenkt das Paar sein Geld (Z. 21).</td><td class="answer">Der Text klingt wie ein Märchenende, liefert aber keine einfache, dauerhaft glückliche Lösung. Dadurch wird die Märchenerwartung zugleich erfüllt und infrage gestellt.</td></tr>
+    </table>
+  </div>
+  <div class="footer"><span>Musterlösung L1 · „Modernes Märchen“</span><span>Seite <span class="pageno"></span></span></div>
+</section>
+
+<section class="page">
+  <div class="student-head" style="border-color:var(--orange)"><div><div class="kicker" style="color:var(--orange)">Musterlösung L1 · Fortsetzung</div><h2 style="color:var(--orange)">Titel deuten und Ergebnis sichern</h2></div><div class="name-line">Weitere begründete Lösungen sind möglich.</div></div>
+  <div class="task" style="border-top:0;margin-top:0">
+    <div class="taskhead">3 · Den Titel „Modernes Märchen“ deuten – Musterantwort</div>
+    <div class="response-box filled" style="min-height:55mm"><b>Beobachtung:</b> Der Titel ist zugleich passend und ironisch, weil das Gedicht typische Märchenelemente mit einer modernen Lebensgeschichte verbindet. <b>Beleg:</b> Der regelmäßige Paarreim lässt den Text geordnet und leicht klingen; außerdem erinnert der Schluss „Und wenn sie nicht gestorben sind …“ (Z. 22) an eine bekannte Märchenformel. <b>Erklärung:</b> Gleichzeitig führen weder Liebe noch Reichtum zu einem einfachen glücklichen Ende. Die märchenhafte Form steht deshalb in Spannung zu Armut, Enge und späterer Enttäuschung und macht deutlich, dass moderne Lebensprobleme keine einfache Märchenlösung besitzen.</div>
+  </div>
+  <div class="task">
+    <div class="taskhead">4 · Partnercheck – mögliche Rückmeldung</div>
+    <div class="response-box filled">Deine Deutung ist nachvollziehbar, weil du den Paarreim und die Schlussformel als Belege verwendest. Erkläre noch genauer, warum die leichte Form im Gegensatz zu den schwierigen Lebensumständen steht.</div>
+  </div>
+  <div class="task">
+    <div class="taskhead">5 · Exit-Ticket – mögliche Lösungen</div>
+    <div class="response-box filled">Die geordnete Form wirkt <b>leicht und märchenhaft</b>, obwohl der Inhalt <b>Armut, Enge und Enttäuschung zeigt</b>.<br><br>Der Titel „Modernes Märchen“ ist <b>ironisch und zugleich passend</b>, weil <b>der Text Märchenformeln benutzt, aber keine einfache Glückslösung anbietet</b>.</div>
+  </div>
+  <div class="box purple"><h3>Zusatzaufgabe – mögliche Präzisierung</h3><p>Die Aussage „Geld macht unglücklich“ ist zu allgemein. Genauer wäre: <span class="answer">Das Gedicht stellt Reichtum nicht als sichere Garantie für Glück dar.</span> Dafür spricht, dass das Paar zunächst stolz auf den Erfolg ist (Z. 17–19), den Reichtum später aber als Belastung erlebt (Z. 19–21). Zugleich zeigt der Anfang, dass auch Armut mit erheblichen Belastungen verbunden ist.</p></div>
+  <div class="box blue"><h3>Bewertungshinweis</h3><p>Eine gute Lösung muss nicht das Wort „Ironie“ verwenden. Ausreichend ist, wenn der Gegensatz zwischen geordneter/märchenhafter Form und problematischem Inhalt nachvollziehbar beschrieben, belegt und erklärt wird.</p></div>
+  <div class="footer"><span>Musterlösung L1 · „Modernes Märchen“</span><span>Seite <span class="pageno"></span></span></div>
+</section>
+
+</body></html>

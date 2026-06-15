@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dashboard Sprachinseln</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/print.css" media="print" />
+</head>
+<body>
+  <aside class="sidebar" aria-label="Navigation">
+    <button id="sidebarToggle" class="sidebarToggle" type="button" aria-label="Seitenleiste minimieren oder erweitern" title="Seitenleiste minimieren/erweitern">☰</button>
+    <div class="brand">
+      <div class="eyebrow">Unterrichtsprojekt</div>
+      <h1>Sprachinseln</h1>
+    </div>
+
+    <nav class="navAccordion" aria-label="Dashboard-Navigation">
+      <button class="navItem navDashboard active" data-view="board"><span class="icon">▦</span><span class="navText">Dashboard</span></button>
+
+      <details class="navGroup">
+        <summary>Themenbereiche</summary>
+        <div id="themeNav" class="navList"></div>
+      </details>
+
+      <details class="navGroup">
+        <summary>Unterricht</summary>
+        <div class="navList">
+          <button class="navItem" data-view="dialog"><span class="icon">↔</span><span class="navText">Sprechsituation</span></button>
+          <button class="navItem" data-view="builder"><span class="icon">✎</span><span class="navText">Satzbaukasten</span></button>
+          <button class="navItem" data-view="register"><span class="icon">✓</span><span class="navText">Angemessenheit</span></button>
+        </div>
+      </details>
+
+      <details class="navGroup">
+        <summary>Material</summary>
+        <div class="navList">
+          <button class="navItem" data-view="cards"><span class="icon">▣</span><span class="navText">Karteikarten</span></button>
+          <button class="navItem" data-view="worksheet"><span class="icon">A4</span><span class="navText">Arbeitsblatt</span></button>
+        </div>
+      </details>
+    </nav>
+
+    <div class="shortcutBox">
+      <strong>Steuerung</strong>
+      <div><kbd>F</kbd><span>App im Vollbild</span></div>
+      <div><kbd>D</kbd><span>Arbeitsblatt drucken</span></div>
+      <div><kbd>Leertaste</kbd><span>Karte aufdecken</span></div>
+      <div><kbd>← / →</kbd><span>Karte wechseln</span></div>
+    </div>
+  </aside>
+
+  <main class="appShell">
+    <header class="topbar">
+      <div>
+        <strong id="viewTitle">Dashboard</strong>
+      </div>
+      <div class="topbarActions">
+        <button id="backToDashboardBtn" class="ghostBtn dashboardBackBtn" type="button" hidden>Dashboard</button>
+        <label class="themeSelectLabel"><span>Situation</span><select id="themeSelectTop" class="themeSelectTop"></select></label>
+        <button id="randomSpeechBtn" class="ghostBtn" type="button" hidden>Zufällige Sprechsituation</button>
+        <button id="fullscreenBtn" class="ghostBtn" type="button">Vollbild</button>
+      </div>
+    </header>
+
+    <section class="workspace">
+      <section id="view-board" class="view active" aria-label="Dashboard"></section>
+      <section id="view-dialog" class="view" aria-label="Sprechsituation"></section>
+      <section id="view-builder" class="view" aria-label="Satzbaukasten"></section>
+      <section id="view-register" class="view" aria-label="Angemessenheit"></section>
+      <section id="view-cards" class="view" aria-label="Karteikarten"></section>
+      <section id="view-worksheet" class="view" aria-label="Arbeitsblatt"></section>
+    </section>
+  </main>
+
+  <div id="printRoot" aria-hidden="true"></div>
+
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

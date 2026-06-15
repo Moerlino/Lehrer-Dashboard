@@ -1,0 +1,266 @@
+/* Druckoptimierung für Arbeitsblatt und Musterlösung
+   Ziel: saubere 2-Seiten-Struktur, kein leerer Vorspann,
+   Aufgabe 5 beginnt auf Seite 2, gut lesbarer Satz und Lochrand links. */
+
+@page{
+  size:A4;
+  /* Standardnaher Heftrand: links mehr Platz zum Lochen */
+  margin:12mm 12mm 12mm 18mm;
+}
+
+@media print{
+  html,body{
+    width:auto;
+    min-height:auto;
+    margin:0!important;
+    padding:0!important;
+    background:#fff!important;
+    overflow:visible!important;
+  }
+
+  body *{ visibility:hidden!important; }
+  #printRoot, #printRoot *{ visibility:visible!important; }
+
+  .sidebar,
+  .topbar,
+  .workspace,
+  .appShell{
+    display:none!important;
+  }
+
+  #printRoot{
+    display:block!important;
+    position:absolute!important;
+    left:0!important;
+    top:0!important;
+    width:100%!important;
+    margin:0!important;
+    padding:0!important;
+    background:#fff!important;
+  }
+
+  #printRoot:empty{ display:none!important; }
+
+  .worksheetPage.classicSheet{
+    width:100%!important;
+    min-height:auto!important;
+    margin:0!important;
+    padding:0!important;
+    box-shadow:none!important;
+    color:#1f2933!important;
+    background:#fff!important;
+    font-size:10.45pt!important;
+    line-height:1.28!important;
+  }
+
+  .classicSheet .sheetHeader{
+    padding-bottom:4.2mm!important;
+    margin-bottom:4.8mm!important;
+    border-bottom:2.2px solid #234f7e!important;
+    break-after:avoid!important;
+    page-break-after:avoid!important;
+  }
+
+  .classicSheet h1{
+    font-size:21pt!important;
+    line-height:1.08!important;
+    margin:0!important;
+  }
+
+  .classicSheet .meta{
+    margin-top:4.2mm!important;
+    gap:5mm!important;
+  }
+
+  .classicSheet .field{
+    min-height:7mm!important;
+    font-size:9.6pt!important;
+  }
+
+  .classicSheet .write-line{
+    min-height:5mm!important;
+  }
+
+  .classicSheet .sheetSection{
+    margin:0 0 4.8mm!important;
+    break-inside:avoid!important;
+    page-break-inside:avoid!important;
+  }
+
+  .classicSheet h2{
+    font-size:12.2pt!important;
+    margin:0 0 2.2mm!important;
+    gap:2.2mm!important;
+    break-after:avoid!important;
+    page-break-after:avoid!important;
+  }
+
+  .classicSheet .num{
+    width:6.5mm!important;
+    height:6.5mm!important;
+    font-size:9pt!important;
+  }
+
+  .classicSheet .box,
+  .classicSheet .situation-box,
+  .classicSheet .practice,
+  .classicSheet .role-card,
+  .classicSheet .mini-box{
+    padding:3mm!important;
+    border-radius:6px!important;
+  }
+
+  .classicSheet .situation-box{
+    padding:3.6mm 4mm!important;
+  }
+
+  .classicSheet .situation-box p{
+    margin:0 0 2mm!important;
+  }
+
+  .classicSheet .goal{
+    margin-top:2.5mm!important;
+  }
+
+  .classicSheet table{
+    width:100%!important;
+    border-collapse:collapse!important;
+    table-layout:fixed!important;
+    break-inside:auto!important;
+    page-break-inside:auto!important;
+  }
+
+  .classicSheet tr{
+    break-inside:avoid!important;
+    page-break-inside:avoid!important;
+  }
+
+  .classicSheet th{
+    font-size:9.55pt!important;
+    padding:1.8mm 2mm!important;
+    background:#f4f7fb!important;
+  }
+
+  .classicSheet td{
+    font-size:10.1pt!important;
+    padding:1.75mm 2mm!important;
+    height:8.8mm!important;
+    vertical-align:top!important;
+  }
+
+  .classicSheet .verb-col{width:18%!important;}
+  .classicSheet .german-col{width:45%!important;}
+  .classicSheet .native-col{width:37%!important;}
+
+  .classicSheet .building-blocks{
+    display:grid!important;
+    grid-template-columns:repeat(3,1fr)!important;
+    gap:3mm!important;
+  }
+
+  .classicSheet .mini-box{
+    min-height:34mm!important;
+    break-inside:avoid!important;
+    page-break-inside:avoid!important;
+  }
+
+  .classicSheet .mini-box-title{
+    min-height:auto!important;
+    margin-bottom:2mm!important;
+    padding-bottom:1.6mm!important;
+    font-size:9.7pt!important;
+  }
+
+  .classicSheet .bullet-line{
+    margin-top:1.8mm!important;
+    line-height:1.2!important;
+  }
+
+  .classicSheet .practice{
+    display:grid!important;
+    grid-template-columns:1.3fr 1fr!important;
+    gap:4mm!important;
+  }
+
+  .classicSheet .steps{
+    display:grid!important;
+    grid-template-columns:repeat(4,1fr)!important;
+    gap:2mm!important;
+  }
+
+  .classicSheet .step{
+    min-height:11mm!important;
+    padding:2mm 1.4mm!important;
+    font-size:9.2pt!important;
+    border-radius:6px!important;
+  }
+
+  .classicSheet .recall-instruction{
+    margin-bottom:2.2mm!important;
+    font-size:10.1pt!important;
+    line-height:1.28!important;
+  }
+
+  .classicSheet .recall-table th:first-child,
+  .classicSheet .recall-table td:first-child{width:34%!important;}
+  .classicSheet .recall-table th:last-child,
+  .classicSheet .recall-table td:last-child{width:66%!important;}
+  .classicSheet .recall-table td{height:12.2mm!important;}
+
+  .classicSheet .roleplay-grid{
+    display:grid!important;
+    grid-template-columns:1fr 1fr!important;
+    gap:3mm!important;
+    margin-bottom:3mm!important;
+  }
+
+  .classicSheet .role-card{
+    min-height:26mm!important;
+    font-size:10pt!important;
+  }
+
+  .classicSheet .role-card strong{
+    margin-bottom:1.5mm!important;
+  }
+
+  .classicSheet .note{
+    font-size:9.6pt!important;
+    margin-top:1.6mm!important;
+  }
+
+  .classicSheet .solutionText{
+    font-weight:700!important;
+  }
+
+  /* Druckumbruch nur für kürzere Arbeitsblätter: Bei fachlich umfangreicheren
+     Arbeitsblättern wie Maler/Maurer darf Aufgabe 5 natürlich direkt nach
+     Aufgabe 4 weiterlaufen, damit maximal zwei A4-Seiten entstehen. */
+  .classicSheet.forceTask5Page .sheetSection:nth-of-type(5){
+    break-before:page!important;
+    page-break-before:always!important;
+    margin-top:0!important;
+    padding-top:0!important;
+  }
+  .classicSheet.naturalTask5Flow .sheetSection:nth-of-type(5){
+    break-before:auto!important;
+    page-break-before:auto!important;
+  }
+
+  /* Aufgabe 5 und 6 sollen zusammenbleiben, soweit möglich. */
+  .classicSheet .sheetSection:nth-of-type(5),
+  .classicSheet .sheetSection:nth-of-type(6){
+    break-inside:avoid!important;
+    page-break-inside:avoid!important;
+  }
+
+  /* Soll verhindern, dass der Druckdialog eine leere erste Seite erzeugt. */
+  body:not(.isPrinting) #printRoot{
+    display:none!important;
+  }
+}
+
+/* Sicherung beim Drucken: verdeckte Lösungen bleiben als neutrale Felder sichtbar. */
+.secureSolution .secureMask{
+  -webkit-print-color-adjust:exact;
+  print-color-adjust:exact;
+}

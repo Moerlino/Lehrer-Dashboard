@@ -1,0 +1,529 @@
+:root{
+  --nav:#123e67; --nav2:#1f5a8d; --ink:#172331; --muted:#5b6675; --line:#d5deea;
+  --paper:#fff; --bg:#edf3f9; --soft:#f6f9fd; --softBlue:#e8f2fb; --accent:#245a91;
+  --shadow:0 18px 45px rgba(18,62,103,.12); --radius:18px; --radiusSmall:12px;
+}
+*{box-sizing:border-box} html,body{height:100%;margin:0} body{font-family:Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; color:var(--ink); background:var(--bg); overflow:hidden;}
+button,select{font:inherit}.sidebar{position:fixed;left:0;top:0;bottom:0;width:300px;background:linear-gradient(180deg,#123e67,#235f94);color:#fff;padding:30px 20px;display:flex;flex-direction:column;gap:22px;overflow-y:auto}.brand{border-bottom:1px solid rgba(255,255,255,.22);padding-bottom:24px}.eyebrow,.navGroup summary{text-transform:uppercase;letter-spacing:.12em;font-weight:800;font-size:13px;color:#bfd4e8}.brand h1{font-size:30px;margin:8px 0 0}.navAccordion{display:flex;flex-direction:column;gap:10px}.navGroup{border:1px solid rgba(255,255,255,.14);border-radius:16px;background:rgba(255,255,255,.055);overflow:hidden}.navGroup summary{list-style:none;cursor:pointer;padding:13px 14px;display:flex;align-items:center;justify-content:space-between;user-select:none}.navGroup summary::-webkit-details-marker{display:none}.navGroup summary::after{content:"▾";font-size:13px;color:#dcecf9;transition:transform .18s ease}.navGroup:not([open]) summary::after{transform:rotate(-90deg)}.navGroup[open] summary{border-bottom:1px solid rgba(255,255,255,.12)}.navList{display:flex;flex-direction:column;gap:7px;padding:10px}.navAccordion .navItem,.navAccordion .themeBtn{padding:11px 12px;border-radius:12px}.navGroup .navList{overflow:hidden;transition:max-height .24s ease,opacity .22s ease,padding-top .24s ease,padding-bottom .24s ease}.navGroup:not([open]) .navList{max-height:0!important;opacity:0;padding-top:0;padding-bottom:0}.navGroup[open] .navList{opacity:1}.navGroup.animating .navList{will-change:max-height,opacity}.navItem,.themeBtn{border:0;background:transparent;color:#e9f3fc;display:flex;align-items:center;gap:12px;width:100%;padding:13px 14px;border-radius:14px;font-weight:750;cursor:pointer;text-align:left}.navItem:hover,.themeBtn:hover{background:rgba(255,255,255,.12)}.navItem.active,.themeBtn.active{background:#fff;color:#103b63}.navAccordion .navItem,.navAccordion .themeBtn{padding:11px 12px;border-radius:12px}.icon{width:30px;height:30px;border-radius:10px;display:inline-flex;align-items:center;justify-content:center;background:rgba(255,255,255,.16);font-weight:900}.active .icon{background:#eaf3fb;color:#1c5588}.shortcutBox{margin-top:auto;border:1px solid rgba(255,255,255,.24);background:rgba(255,255,255,.13);border-radius:14px;padding:14px 14px 16px;color:#fff;font-size:14px}.shortcutBox div{display:flex;align-items:center;gap:9px;margin-top:8px}.shortcutBox kbd{background:rgba(255,255,255,.24);padding:3px 9px;border-radius:7px;min-width:32px;text-align:center;font-weight:900}.appShell{margin-left:300px;height:100vh;display:flex;flex-direction:column}.topbar{height:56px;background:#fff;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 28px;color:#174a7b}.topbar strong{font-size:20px}.topbarActions{display:flex;align-items:center;gap:12px}.pill{background:#e7f1fb;color:#123e67;border-radius:999px;padding:7px 14px;font-weight:900}.ghostBtn,.smallBtn,.primaryBtn{border:1px solid var(--line);background:#fff;color:#123e67;border-radius:12px;padding:10px 14px;font-weight:850;cursor:pointer}.primaryBtn{background:var(--accent);color:#fff;border-color:var(--accent)}.ghostBtn:hover,.smallBtn:hover{background:#f0f6fc}.workspace{height:calc(100vh - 56px);overflow:auto;padding:22px 28px}.view{display:none}.view.active{display:block}.bar{height:42px;background:#fff;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 16px;margin:-22px -28px 20px;color:#174a7b;font-weight:900}.subbar{height:46px;background:#245a91;color:#fff;display:flex;align-items:center;justify-content:space-between;padding:0 18px;margin:-20px -28px 20px;font-weight:900}.subbar .muted{color:#e4effa;font-size:14px}.grid{display:grid;gap:18px}.grid.two{grid-template-columns:1.3fr .7fr}.grid.three{grid-template-columns:repeat(3,1fr)}.panel{background:#fff;border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden}.panelHead{background:var(--accent);color:#fff;padding:16px 22px;font-size:22px;font-weight:900;display:flex;justify-content:space-between;align-items:center}.panelBody{padding:22px}.card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:22px;box-shadow:var(--shadow)}.soft{background:var(--soft)}.h2{font-size:28px;color:#174a7b;margin:0 0 14px}.lead{font-size:24px;line-height:1.35;font-weight:850}.mutedText{color:var(--muted);line-height:1.45}.chips{display:flex;flex-wrap:wrap;gap:10px}.chip{background:#edf5fd;border:1px solid #cfe0ef;border-radius:999px;padding:9px 13px;font-weight:800;color:#16476f}.sentenceList{display:flex;flex-direction:column;gap:10px}.sentence{background:#fff;border:1px solid var(--line);border-left:5px solid var(--accent);border-radius:12px;padding:11px 14px;font-size:20px}.dialogList{display:flex;flex-direction:column;gap:12px}.dialogRow{display:grid;grid-template-columns:140px 1fr;gap:16px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px 18px}.dialogRow.hidden{filter:blur(7px);opacity:.36}.dialogRole{font-weight:900;color:#174a7b}.dialogText{font-size:22px;font-weight:700}.toolRow{display:flex;gap:10px;align-items:center;flex-wrap:wrap}.builderLayout{display:grid;grid-template-columns:1fr 1fr 1fr;gap:18px}.choiceBox{border:1px solid var(--line);border-radius:16px;background:#fff;padding:18px}.choiceBox h3{margin:0 0 12px;color:#174a7b;font-size:22px}.choiceBtn{display:block;width:100%;text-align:left;border:1px solid var(--line);background:#fff;border-radius:10px;padding:12px 14px;margin:9px 0;font-weight:850;cursor:pointer}.choiceBtn.active{background:#e8f2fb;border-color:#245a91;color:#113f68}.resultLine{margin-top:18px;background:#123e67;color:#fff;border-radius:16px;padding:24px;font-size:28px;font-weight:900;display:flex;justify-content:space-between;gap:16px;align-items:center}.registerGrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}.registerCard{border:1px solid var(--line);background:#fff;border-radius:16px;padding:18px}.registerPhrase{font-size:22px;font-weight:850;margin-bottom:12px}.badge{display:inline-block;border-radius:999px;background:#e8f2fb;color:#123e67;padding:6px 10px;font-weight:900}.cardToolbar{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:14px}.cardToolbar select{padding:11px;border:1px solid var(--line);border-radius:12px;background:#fff;font-weight:800}.flashStage{background:#edf5fd;border:1px solid var(--line);border-radius:20px;padding:22px;box-shadow:var(--shadow)}.flashCard{max-width:1050px;min-height:540px;margin:0 auto;background:#fff;border:1px solid var(--line);border-radius:22px;overflow:hidden;display:flex;flex-direction:column}.flashHead{height:76px;background:#245a91;color:#fff;display:flex;align-items:center;justify-content:space-between;padding:0 42px;font-weight:900}.flashTopic{font-size:28px}.flashBody{flex:1;display:flex;align-items:center;justify-content:center;padding:38px 58px}.promptBox{border:2px solid #245a91;background:#e8f2fb;border-radius:18px;padding:36px 46px;width:100%;font-size:44px;line-height:1.25;font-weight:900}.answers{width:100%;display:flex;flex-direction:column;gap:10px}.answer{border:1px solid var(--line);border-left:6px solid var(--accent);border-radius:12px;padding:13px 18px;font-size:27px;font-weight:760}.tabs{display:flex;gap:8px;margin-bottom:14px}.tabBtn{border:1px solid var(--line);background:#fff;border-radius:12px;padding:10px 16px;font-weight:900;cursor:pointer}.tabBtn.active{background:#245a91;color:#fff;border-color:#245a91}.worksheetControls{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;gap:14px}.worksheetControls select{padding:11px 14px;border:1px solid var(--line);border-radius:12px;background:#fff;font-weight:800}.sheetFrame{background:#dfe8f2;border:1px solid var(--line);border-radius:16px;padding:24px;overflow:auto}.worksheetPage{width:210mm;min-height:297mm;background:#fff;margin:0 auto;padding:14mm;box-shadow:0 14px 40px rgba(0,0,0,.15);color:#111}.wsTitle{font-size:26px;color:#174a7b;margin:0 0 12px}.wsSection{break-inside:avoid;page-break-inside:avoid;margin-top:16px}.wsSection h3{font-size:18px;margin:0 0 8px;color:#174a7b;display:flex;gap:8px;align-items:center}.num{background:#174a7b;color:#fff;border-radius:50%;width:24px;height:24px;display:inline-flex;align-items:center;justify-content:center;font-size:13px}.situationBox{border:1px solid var(--line);background:#f4f8fc;border-radius:12px;padding:12px;font-size:15px;line-height:1.4}.wsTable{width:100%;border-collapse:collapse;font-size:13.5px}.wsTable th{text-align:left;color:#174a7b;border-bottom:1px solid var(--line);padding:8px}.wsTable td{border-bottom:1px solid var(--line);padding:8px;height:34px}.lineCell{min-width:58mm}.boxGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}.miniBox{border:1px solid var(--line);border-radius:10px;padding:9px;font-size:13.5px}.miniBox h4{margin:0 0 6px;color:#174a7b}.miniBox ul{margin:0;padding-left:18px}.routine{border:1px solid var(--line);border-radius:10px;padding:10px;font-size:14px}.roleGrid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.roleBox{border:1px solid var(--line);border-radius:10px;padding:10px;min-height:80px}.hiddenPrintOnly{display:none}.solutionText{color:#173f67;font-weight:700}.errorNote{background:#fff3cd;border:1px solid #ffe69c;color:#664d03;padding:12px;border-radius:12px}@media (max-width:1000px){.sidebar{width:250px}.appShell{margin-left:250px}.grid.two,.grid.three,.builderLayout{grid-template-columns:1fr}.promptBox{font-size:30px}.answer{font-size:20px}.worksheetPage{width:100%;min-height:auto}}@media (max-height:760px){.flashCard{min-height:430px}.promptBox{font-size:34px}.answer{font-size:22px;padding:10px 14px}.flashBody{padding:24px 42px}}
+
+/* Arbeitsblatt-Layout: stabilisierte Originalvorlage */
+.worksheetPage.classicSheet{width:210mm;min-height:297mm;background:#fff;margin:0 auto;padding:13mm 13mm 11mm;box-shadow:0 4px 22px rgba(0,0,0,.16);color:#1f2933;font-family:Arial,Helvetica,sans-serif;font-size:11.2pt;line-height:1.35}.classicSheet .sheetHeader{border-bottom:3px solid #234f7e;padding-bottom:7mm;margin-bottom:6mm;break-after:avoid;page-break-after:avoid}.classicSheet .title-row{display:flex;align-items:flex-end;justify-content:space-between;gap:10mm}.classicSheet h1{margin:0;font-size:23pt;letter-spacing:-.3pt;color:#234f7e;font-weight:800}.classicSheet .meta{display:grid;grid-template-columns:1fr 1fr;gap:4mm;margin-top:5mm}.classicSheet .field{display:flex;align-items:flex-end;gap:2mm;min-height:8mm;font-size:10.2pt;color:#5f6c7b}.classicSheet .field span{white-space:nowrap;font-weight:700;color:#1f2933}.classicSheet .write-line{flex:1;border-bottom:1.5px solid #c8d0da;min-height:6mm}.classicSheet .sheetSection{margin:0 0 5mm;break-inside:avoid;page-break-inside:avoid}.classicSheet h2{margin:0 0 2.3mm;font-size:12.6pt;color:#234f7e;display:flex;align-items:center;gap:2.5mm;break-after:avoid;page-break-after:avoid}.classicSheet .num{display:inline-flex;align-items:center;justify-content:center;width:7mm;height:7mm;border-radius:50%;color:white;background:#234f7e;font-size:10pt;font-weight:800;flex:0 0 auto}.classicSheet .box{border:1.4px solid #c8d0da;border-radius:8px;background:#fff;padding:4mm;break-inside:avoid;page-break-inside:avoid}.classicSheet .situation-box{background:#e7f0fa;border-color:#a9c4df;padding:3.5mm 4mm}.classicSheet .situation-box p{margin:0 0 2mm}.classicSheet .goal{margin-top:3mm;display:flex;gap:2mm;align-items:flex-end}.classicSheet .goal strong{white-space:nowrap}.classicSheet table{width:100%;border-collapse:collapse;break-inside:avoid;page-break-inside:avoid;background:white}.classicSheet th{background:#f4f7fb;color:#1f2933;text-align:left;font-size:10.3pt;padding:2.5mm;border:1px solid #c8d0da;font-weight:800}.classicSheet td{border:1px solid #c8d0da;padding:2.1mm 2.5mm;height:10.5mm;vertical-align:top}.classicSheet .verb-col{width:20%}.classicSheet .german-col{width:43%}.classicSheet .native-col{width:37%}.classicSheet .building-blocks{display:grid;grid-template-columns:repeat(3,1fr);gap:3mm}.classicSheet .mini-box{border:1.2px solid #c8d0da;border-radius:7px;background:#fbfcfe;padding:3mm;min-height:37mm;break-inside:avoid;page-break-inside:avoid}.classicSheet .mini-box-title{font-weight:800;color:#234f7e;margin-bottom:2mm;border-bottom:1px solid #c8d0da;padding-bottom:1.5mm;min-height:8mm}.classicSheet .bullet-line{display:flex;align-items:flex-end;gap:2mm;margin-top:2.5mm}.classicSheet .bullet-line::before{content:"•";color:#234f7e;font-weight:800}.classicSheet .practice{display:grid;grid-template-columns:1.2fr 1fr;gap:5mm;align-items:start}.classicSheet .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:2mm}.classicSheet .step{background:#f4f7fb;border:1px solid #c8d0da;border-radius:6px;padding:2.5mm 2mm;text-align:center;font-weight:700;color:#1f2933;min-height:14mm;display:flex;align-items:center;justify-content:center}.classicSheet .recall-instruction{font-weight:700;margin-bottom:2.5mm;color:#1f2933}.classicSheet .recall-table{table-layout:fixed}.classicSheet .recall-table th:first-child,.classicSheet .recall-table td:first-child{width:38%}.classicSheet .recall-table th:last-child,.classicSheet .recall-table td:last-child{width:62%}.classicSheet .recall-table td{height:11mm}.classicSheet .roleplay-grid{display:grid;grid-template-columns:1fr 1fr;gap:3mm;margin-bottom:3mm}.classicSheet .role-card{background:#f4f7fb;border:1.2px solid #c8d0da;border-radius:7px;padding:3mm;min-height:30mm}.classicSheet .role-card strong{color:#234f7e;display:block;margin-bottom:2mm}.classicSheet .note{font-size:10.3pt;color:#5f6c7b;margin-top:2mm}.classicSheet .solutionText{color:#173f67;font-weight:700}
+
+/* --- Update: kompakteres Tafelbild, Verbenübersicht, einklappbare Seitenleiste --- */
+.sidebarToggle{
+  width:40px;height:40px;border:1px solid var(--line);background:#fff;color:#123e67;border-radius:12px;
+  display:inline-flex;align-items:center;justify-content:center;font-size:19px;font-weight:900;cursor:pointer;margin-right:8px;
+}
+.sidebarToggle:hover{background:#f0f6fc}
+body.sidebarCollapsed .sidebar{transform:translateX(-300px)}
+.sidebar{transition:transform .24s ease}
+.appShell{transition:margin-left .24s ease}
+body.sidebarCollapsed .appShell{margin-left:0}
+body.sidebarCollapsed .topbar{padding-left:18px}
+.boardGrid{display:grid;grid-template-columns:1.15fr .85fr;grid-template-areas:"situation sentences" "verbs sentences";gap:18px;align-items:start}
+.situationPanel{grid-area:situation}.verbOverview{grid-area:verbs}.sentenceOverview{grid-area:sentences}
+.verbGrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px}
+.verbTile{border:1px solid var(--line);border-left:5px solid var(--accent);background:#fff;border-radius:12px;padding:10px 12px}
+.verbName{font-weight:950;color:#123e67;font-size:18px;margin-bottom:3px}
+.verbExample{color:var(--muted);font-weight:650;line-height:1.25;font-size:14px}
+@media (max-width: 980px){.boardGrid{grid-template-columns:1fr;grid-template-areas:"situation" "verbs" "sentences"}.sidebar{width:280px}body.sidebarCollapsed .sidebar{transform:translateX(-280px)}}
+
+/* --- Fix: Seitenleiste wird schmal minimiert statt ausgeblendet --- */
+.sidebar{transition:width .24s ease,padding .24s ease,transform .24s ease;transform:none!important;position:fixed}.appShell{transition:margin-left .24s ease}.sidebarToggle{position:sticky;top:0;z-index:5;align-self:flex-end;width:38px;height:38px;margin:0 0 4px 0;border:1px solid rgba(255,255,255,.24);background:rgba(255,255,255,.14);color:#fff;border-radius:12px;box-shadow:none}.sidebarToggle:hover{background:rgba(255,255,255,.22)}body.sidebarMinimized .sidebar{width:82px;padding:18px 12px;gap:14px;overflow:hidden}body.sidebarMinimized .appShell{margin-left:82px}body.sidebarMinimized .sidebarToggle{align-self:center}body.sidebarMinimized .brand{height:46px;padding:0;border:0;display:flex;align-items:center;justify-content:center}body.sidebarMinimized .brand .eyebrow,body.sidebarMinimized .brand h1{display:none}body.sidebarMinimized .brand::after{content:"S";width:42px;height:42px;border-radius:14px;background:rgba(255,255,255,.16);display:flex;align-items:center;justify-content:center;font-size:22px;font-weight:950;color:#fff}body.sidebarMinimized .navAccordion{gap:8px}body.sidebarMinimized .navGroup{border:0;background:transparent;border-radius:14px}body.sidebarMinimized .navGroup summary{height:44px;padding:0;justify-content:center;border:0;font-size:0;color:transparent;border-radius:14px;background:rgba(255,255,255,.09)}body.sidebarMinimized .navGroup summary::after{display:none}body.sidebarMinimized .navGroup:nth-child(1) summary::before{content:"B"}body.sidebarMinimized .navGroup:nth-child(2) summary::before{content:"▦"}body.sidebarMinimized .navGroup:nth-child(3) summary::before{content:"A4"}body.sidebarMinimized .navGroup summary::before{font-size:15px;color:#fff;font-weight:950;letter-spacing:0;background:rgba(255,255,255,.13);width:34px;height:34px;border-radius:11px;display:flex;align-items:center;justify-content:center}body.sidebarMinimized .navGroup[open] summary{border:0}body.sidebarMinimized .navList,body.sidebarMinimized .shortcutBox{display:none!important}body.sidebarMinimized .topbar{padding-left:28px}
+@media (max-width:1000px){body.sidebarMinimized .sidebar{width:76px}body.sidebarMinimized .appShell{margin-left:76px}}
+
+/* Sprechsituation: klare Partneransicht statt Dialog-Aufdeckmodus */
+.speechSituation{display:flex;flex-direction:column;gap:18px;max-width:1320px;margin:0 auto}.situationIntro{background:#fff;border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow);padding:20px 24px;display:grid;grid-template-columns:260px 1fr;gap:22px;align-items:center}.situationIntro strong{display:block;color:#174a7b;font-size:28px;line-height:1.15}.situationIntro p{margin:0;color:var(--muted);font-size:20px;line-height:1.38}.miniLabel{text-transform:uppercase;letter-spacing:.14em;font-size:12px;font-weight:900;color:#6f8194;margin-bottom:5px}.partnerGrid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.situationRoleCard{background:#fff;border:1px solid var(--line);border-radius:20px;box-shadow:var(--shadow);overflow:hidden;display:flex;flex-direction:column;min-height:520px}.situationRoleCard.partnerB{border-color:#b8d2e9}.roleHeader{background:#245a91;color:#fff;padding:18px 22px;font-size:25px;font-weight:900}.partnerB .roleHeader{background:#123e67}.roleTask{padding:22px 24px;font-size:23px;line-height:1.32;font-weight:820;color:#1d2a38;border-bottom:1px solid var(--line);background:#f8fbfe}.roleHelpGrid{display:grid;grid-template-columns:1fr 1.08fr;gap:18px;padding:22px 24px;align-items:start}.roleHelpGrid h3{margin:0 0 10px;color:#174a7b;font-size:18px}.roleHelpGrid ul{margin:0;padding-left:22px;color:#3d4d60;font-size:18px;line-height:1.45}.roleHelpGrid li{margin-bottom:8px}.phraseStack{display:flex;flex-direction:column;gap:9px}.phraseStack div{border:1px solid var(--line);border-left:5px solid var(--accent);border-radius:12px;background:#fff;padding:10px 12px;font-size:18px;font-weight:760;line-height:1.28}.speechFlow{background:#123e67;color:#fff;border-radius:18px;padding:16px 20px;display:flex;align-items:center;gap:10px;flex-wrap:wrap;font-size:18px}.speechFlow span{font-weight:900;margin-right:4px}.speechFlow em{font-style:normal;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.22);border-radius:999px;padding:7px 11px;font-weight:800}@media (max-width:1100px){.situationIntro{grid-template-columns:1fr}.partnerGrid{grid-template-columns:1fr}.situationRoleCard{min-height:auto}.roleHelpGrid{grid-template-columns:1fr}}
+
+.contextualBtn[hidden]{display:none!important}
+.view > .subbar:first-child{margin-top:0}
+
+/* --- Update: Dashboard-Layout verfeinert, Navigationskacheln, Karten-Flip --- */
+.view.active{animation:viewEnter .22s ease both}
+@keyframes viewEnter{from{opacity:.35;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+.boardGridRefined{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(330px,.75fr);grid-template-areas:"situation side" "actions side";gap:18px;align-items:start}
+.boardGridRefined .heroSituation{grid-area:situation;border:0;box-shadow:0 22px 58px rgba(18,62,103,.18)}
+.boardGridRefined .heroSituation .panelHead{padding:18px 24px;font-size:24px;background:linear-gradient(135deg,#174a7b,#2d6ca4)}
+.boardGridRefined .heroSituation .panelBody{padding:30px 28px 34px;background:linear-gradient(180deg,#fff,#f7fbff)}
+.boardGridRefined .heroSituation .lead{font-size:30px;line-height:1.28;letter-spacing:-.02em;color:#132437}
+.boardGridRefined .heroSituation .mutedText{font-size:17px;margin-top:20px}
+.sideColumn{grid-area:side;display:flex;flex-direction:column;gap:18px;min-width:0}
+.compactInfoCard{padding:20px;box-shadow:0 14px 38px rgba(18,62,103,.10)}
+.compactInfoCard .h2{font-size:24px;margin-bottom:12px}
+.compactVerbGrid{grid-template-columns:1fr;gap:8px}
+.compactVerbGrid .verbTile{padding:9px 11px;border-radius:10px}
+.compactVerbGrid .verbName{font-size:16px}
+.compactVerbGrid .verbExample{font-size:13.5px}
+.dashboardActions{grid-area:actions;display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.dashboardActionCard{border:1px solid var(--line);background:#fff;border-radius:18px;padding:20px;display:flex;align-items:center;gap:16px;text-align:left;cursor:pointer;box-shadow:var(--shadow);transition:transform .18s ease, box-shadow .18s ease, border-color .18s ease}
+.dashboardActionCard:hover{transform:translateY(-3px);box-shadow:0 22px 50px rgba(18,62,103,.18);border-color:#9bbbd8}
+.dashboardActionCard:active{transform:translateY(-1px) scale(.995)}
+.dashboardActionCard strong{display:block;font-size:20px;color:#174a7b;margin-bottom:5px}
+.dashboardActionCard small{display:block;color:var(--muted);font-size:14px;line-height:1.35;font-weight:650}
+.actionIcon{width:46px;height:46px;border-radius:14px;background:#e7f1fb;color:#174a7b;display:inline-flex;align-items:center;justify-content:center;font-weight:950;font-size:19px;flex:0 0 auto}
+.flashStage{perspective:1800px}
+.flashCard.flipCard{background:transparent;border:0;box-shadow:none;overflow:visible;display:block;min-height:540px}
+.flashInner{position:relative;width:100%;min-height:540px;transform-style:preserve-3d;transition:transform .58s cubic-bezier(.22,.61,.36,1)}
+.flashCard.isFlipped .flashInner{transform:rotateY(180deg)}
+.flashFace{position:absolute;inset:0;background:#fff;border:1px solid var(--line);border-radius:22px;overflow:hidden;display:flex;flex-direction:column;backface-visibility:hidden;box-shadow:0 18px 45px rgba(18,62,103,.12)}
+.flashBack{transform:rotateY(180deg)}
+.promptLabel{font-size:18px;letter-spacing:.14em;text-transform:uppercase;color:#123e67;margin-bottom:18px}
+@media (max-width:1100px){.boardGridRefined{grid-template-columns:1fr;grid-template-areas:"situation" "side" "actions"}.dashboardActions{grid-template-columns:1fr}.boardGridRefined .heroSituation .lead{font-size:25px}}
+@media (max-height:760px){.flashCard.flipCard,.flashInner{min-height:430px}}
+
+/* === Update: kompakter App-Flow, Dashboard-Rücksprung, minimierte Icon-Navigation === */
+.topbarActions{gap:10px}.dashboardBackBtn{padding:8px 12px}.themeSelectLabel{display:flex;align-items:center;gap:8px;background:#e7f1fb;color:#123e67;border-radius:999px;padding:5px 8px 5px 12px;font-weight:900}.themeSelectLabel span{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#406b94}.themeSelectTop{border:0;background:#fff;color:#123e67;border-radius:999px;padding:7px 26px 7px 10px;font-weight:900;outline:none;max-width:230px}.workspace{overflow:hidden}.view.active{height:100%}.view:not(#view-worksheet).active{display:flex;flex-direction:column}.view:not(#view-worksheet) > *{min-height:0}.boardGridRefined.dashboardFitGrid{height:100%;grid-template-rows:auto minmax(0,1fr);align-items:stretch}.boardGridRefined.dashboardFitGrid .heroSituation{display:flex;flex-direction:column}.boardGridRefined.dashboardFitGrid .heroSituation .panelBody{flex:1}.sideColumn{min-height:0}.verbSentenceOverview{height:100%;display:flex;flex-direction:column}.verbSentenceList{display:flex;flex-direction:column;gap:10px;overflow:auto;padding-right:3px}.verbSentenceTile{border:1px solid var(--line);background:#fff;border-radius:12px;padding:11px 13px;border-left:5px solid var(--accent)}.verbSentenceTile .verbName{font-size:15px;font-weight:950;color:#174a7b;text-transform:none;margin-bottom:4px}.verbSentenceTile .verbSentence{font-size:19px;line-height:1.28;font-weight:780;color:#15283a}.dashboardFitGrid .dashboardActions{align-self:end}.navDashboard{margin:0 0 6px 0;background:rgba(255,255,255,.08)}body.sidebarMinimized .sidebar{overflow-y:auto;overflow-x:hidden}body.sidebarMinimized .navAccordion{gap:6px}body.sidebarMinimized .navDashboard,body.sidebarMinimized .navItem,body.sidebarMinimized .themeBtn{justify-content:center;padding:8px;border-radius:13px}body.sidebarMinimized .navText{display:none}body.sidebarMinimized .navGroup summary{display:none}body.sidebarMinimized .navGroup .navList{display:flex!important;max-height:none!important;opacity:1!important;padding:0!important;gap:6px}body.sidebarMinimized .navGroup{display:block}body.sidebarMinimized .icon{width:38px;height:38px;border-radius:13px}body.sidebarMinimized .shortcutBox{display:none!important}.speechSituation,.builderLayout,.registerGrid,.flashStage{max-height:100%;overflow:auto}.flashStage{flex:1}.flashCard.flipCard,.flashInner{min-height:clamp(420px, calc(100vh - 180px), 620px)}.sheetFrame{max-height:calc(100vh - 150px)}
+@media (max-height:760px){.boardGridRefined .heroSituation .lead{font-size:24px}.boardGridRefined .heroSituation .panelBody{padding:22px}.verbSentenceTile .verbSentence{font-size:17px}.dashboardActionCard{padding:15px}.compactInfoCard{padding:16px}}
+
+/* === Fix: Dashboard-Kacheln, responsive Verben-&-Sätze-Kasten, Sidebar-Navigation === */
+.dashboardActions{grid-template-columns:repeat(3,minmax(0,1fr));align-self:stretch}
+.dashboardActionCard{min-width:0}
+.verbSentenceList{overflow:visible;gap:clamp(5px,0.85vh,10px);padding-right:0;min-height:0}
+.verbSentenceTile{padding:clamp(7px,1.05vh,11px) clamp(9px,1.15vh,13px)}
+.verbSentenceTile .verbName{font-size:clamp(11px,1.25vh,15px);margin-bottom:clamp(2px,.35vh,4px)}
+.verbSentenceTile .verbSentence{font-size:clamp(13px,1.65vh,19px);line-height:1.18}
+.verbSentenceOverview{overflow:hidden}
+body.sidebarMinimized .navDashboard .icon,body.sidebarMinimized .navItem .icon,body.sidebarMinimized .themeBtn .icon{pointer-events:none}
+body.sidebarMinimized .navDashboard,body.sidebarMinimized .navItem,body.sidebarMinimized .themeBtn{cursor:pointer}
+@media (max-width:1100px){.dashboardActions{grid-template-columns:1fr}.verbSentenceTile .verbSentence{font-size:clamp(13px,1.6vh,17px)}}
+@media (max-height:760px){.dashboardActions{gap:10px}.dashboardActionCard{padding:12px}.dashboardActionCard strong{font-size:17px}.dashboardActionCard small{font-size:12px}.actionIcon{width:38px;height:38px}.verbSentenceList{gap:5px}.verbSentenceTile{padding:6px 9px}.verbSentenceTile .verbSentence{font-size:clamp(12px,1.55vh,16px);line-height:1.14}}
+
+
+/* === Fix: echte Dropdowns + Dashboard ohne Scroll-Zwang === */
+body:not(.sidebarMinimized) .navGroup .navList{
+  display:flex;
+  overflow:hidden;
+  transition:max-height .26s ease, opacity .22s ease, padding-top .24s ease, padding-bottom .24s ease;
+}
+body:not(.sidebarMinimized) .navGroup:not([open]) .navList{
+  max-height:0;
+  opacity:0;
+  padding-top:0;
+  padding-bottom:0;
+}
+body:not(.sidebarMinimized) .navGroup[open] .navList{
+  opacity:1;
+}
+
+/* Dashboard-Fit: Inhalt näher zusammen, keine abgeschnittenen Kacheln */
+.workspace{padding:20px 28px;}
+.boardGridRefined.dashboardFitGrid{
+  height:100%;
+  max-height:100%;
+  display:grid;
+  grid-template-columns:minmax(0,1.15fr) minmax(300px,.85fr);
+  grid-template-areas:"situation side" "actions side";
+  grid-template-rows:auto auto;
+  gap:16px;
+  align-content:start;
+}
+.boardGridRefined.dashboardFitGrid .heroSituation .panelHead{padding:14px 22px;font-size:23px;}
+.boardGridRefined.dashboardFitGrid .heroSituation .panelBody{padding:26px 28px;}
+.boardGridRefined.dashboardFitGrid .heroSituation .lead{font-size:clamp(22px,2.35vw,30px);line-height:1.24;}
+.boardGridRefined.dashboardFitGrid .heroSituation .mutedText{font-size:clamp(14px,1.1vw,17px);margin-top:16px;}
+.sideColumn{height:100%;min-height:0;}
+.verbSentenceOverview{height:100%;max-height:calc(100vh - 112px);min-height:0;}
+.verbSentenceOverview .h2{font-size:clamp(22px,2vw,28px);margin-bottom:12px;}
+.verbSentenceList{gap:clamp(5px,0.9vh,10px);overflow:hidden;min-height:0;}
+.verbSentenceTile{padding:clamp(6px,0.9vh,10px) 12px;}
+.verbSentenceTile .verbName{font-size:clamp(11px,1.2vh,14px);margin-bottom:2px;}
+.verbSentenceTile .verbSentence{font-size:clamp(14px,1.75vh,19px);line-height:1.18;}
+.dashboardActions{align-self:start!important;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;}
+.dashboardActionCard{padding:clamp(12px,1.5vh,18px);min-height:0;}
+.dashboardActionCard strong{font-size:clamp(16px,1.55vw,20px);line-height:1.05;}
+.dashboardActionCard small{font-size:clamp(11px,1.05vw,14px);line-height:1.25;}
+.actionIcon{width:clamp(38px,4vw,52px);height:clamp(38px,4vw,52px);flex:0 0 auto;}
+@media (max-height:820px){
+  .workspace{padding-top:16px;padding-bottom:16px;}
+  .boardGridRefined.dashboardFitGrid{gap:12px;}
+  .boardGridRefined.dashboardFitGrid .heroSituation .panelBody{padding:20px 24px;}
+  .dashboardActions{gap:10px;}
+  .dashboardActionCard{padding:10px 12px;gap:10px;}
+  .verbSentenceOverview{max-height:calc(100vh - 96px);}
+}
+@media (max-height:700px){
+  .boardGridRefined.dashboardFitGrid .heroSituation .lead{font-size:clamp(18px,2vw,24px);}
+  .verbSentenceTile .verbSentence{font-size:clamp(12px,1.55vh,16px);}
+  .dashboardActionCard small{display:none;}
+}
+@media (max-width:1100px){
+  .boardGridRefined.dashboardFitGrid{grid-template-columns:1fr;grid-template-areas:"situation" "side" "actions";height:auto;}
+  .verbSentenceOverview{max-height:none;}
+  .verbSentenceList{overflow:visible;}
+}
+
+
+/* === Fix: Dashboard-Navigationskacheln ohne Abschneiden === */
+.boardGridRefined.dashboardFitGrid{
+  grid-template-areas:"situation side" "actions actions" !important;
+  grid-template-rows:minmax(0,1fr) auto !important;
+  align-content:stretch !important;
+}
+.boardGridRefined.dashboardFitGrid .heroSituation,
+.boardGridRefined.dashboardFitGrid .sideColumn{
+  min-height:0;
+}
+.boardGridRefined.dashboardFitGrid .heroSituation .panelBody{
+  overflow:hidden;
+}
+.boardGridRefined.dashboardFitGrid .sideColumn{
+  height:auto;
+}
+.boardGridRefined.dashboardFitGrid .verbSentenceOverview{
+  max-height:none;
+}
+.dashboardActions{
+  grid-area:actions !important;
+  display:grid !important;
+  grid-template-columns:repeat(3,minmax(0,1fr)) !important;
+  gap:14px !important;
+  align-self:end !important;
+  min-width:0;
+}
+.dashboardActionCard{
+  min-width:0;
+  min-height:92px;
+  padding:14px 16px !important;
+  gap:12px !important;
+  overflow:hidden;
+}
+.dashboardActionCard strong{
+  font-size:clamp(16px,1.35vw,19px) !important;
+  line-height:1.08 !important;
+  overflow-wrap:break-word;
+}
+.dashboardActionCard small{
+  font-size:clamp(11px,.9vw,13px) !important;
+  line-height:1.22 !important;
+  overflow-wrap:break-word;
+}
+.actionIcon{
+  width:44px !important;
+  height:44px !important;
+  flex:0 0 44px !important;
+}
+@media (max-height:760px){
+  .dashboardActionCard{min-height:78px;padding:10px 12px !important;}
+  .dashboardActionCard small{display:none;}
+  .actionIcon{width:38px !important;height:38px !important;flex-basis:38px !important;}
+}
+@media (max-width:1150px){
+  .dashboardActions{grid-template-columns:1fr !important;}
+  .dashboardActionCard{min-height:auto;}
+}
+
+/* === Fix: Dashboard-Situation wieder kompakt, Navigationskacheln vollbreit === */
+.boardGridRefined.dashboardFitGrid{
+  grid-template-columns:minmax(0,1.15fr) minmax(310px,.85fr) !important;
+  grid-template-areas:"situation side" "actions actions" !important;
+  grid-template-rows:auto auto !important;
+  align-content:start !important;
+  align-items:start !important;
+  height:auto !important;
+  min-height:0 !important;
+}
+.boardGridRefined.dashboardFitGrid .heroSituation{
+  align-self:start !important;
+  min-height:0 !important;
+}
+.boardGridRefined.dashboardFitGrid .heroSituation .panelBody{
+  flex:0 0 auto !important;
+  min-height:0 !important;
+  overflow:visible !important;
+  padding:26px 28px 30px !important;
+}
+.boardGridRefined.dashboardFitGrid .heroSituation .lead{
+  font-size:clamp(24px,2.25vw,32px) !important;
+  line-height:1.24 !important;
+}
+.boardGridRefined.dashboardFitGrid .sideColumn{
+  align-self:start !important;
+  height:auto !important;
+  min-height:0 !important;
+}
+.boardGridRefined.dashboardFitGrid .verbSentenceOverview{
+  height:auto !important;
+  max-height:calc(100vh - 150px) !important;
+}
+.dashboardActions{
+  grid-area:actions !important;
+  display:grid !important;
+  grid-template-columns:repeat(3,minmax(220px,1fr)) !important;
+  gap:16px !important;
+  margin-top:0 !important;
+  align-self:start !important;
+}
+.dashboardActionCard{
+  min-height:96px !important;
+  overflow:visible !important;
+}
+@media (max-height:760px){
+  .boardGridRefined.dashboardFitGrid .heroSituation .panelBody{padding:20px 24px !important;}
+  .boardGridRefined.dashboardFitGrid .heroSituation .lead{font-size:clamp(20px,2vw,26px) !important;}
+  .dashboardActionCard{min-height:76px !important;}
+}
+@media (max-width:1150px){
+  .dashboardActions{grid-template-columns:1fr !important;}
+}
+@media (max-width:1100px){
+  .boardGridRefined.dashboardFitGrid{
+    grid-template-columns:1fr !important;
+    grid-template-areas:"situation" "side" "actions" !important;
+  }
+  .boardGridRefined.dashboardFitGrid .verbSentenceOverview{max-height:none !important;}
+}
+
+
+/* === Sidebar-Menüs: standardmäßig einklappbar + minimierte Leiste nur mit Oberkategorien === */
+body.sidebarMinimized .navAccordion{gap:10px !important;}
+body.sidebarMinimized .navDashboard{display:flex !important;justify-content:center !important;padding:8px !important;border-radius:13px !important;}
+body.sidebarMinimized .navDashboard .navText{display:none !important;}
+body.sidebarMinimized .navGroup{display:block !important;border:0 !important;background:transparent !important;border-radius:14px !important;overflow:visible !important;}
+body.sidebarMinimized .navGroup summary{display:flex !important;height:44px !important;padding:0 !important;justify-content:center !important;align-items:center !important;border:0 !important;font-size:0 !important;color:transparent !important;border-radius:14px !important;background:rgba(255,255,255,.09) !important;cursor:pointer !important;}
+body.sidebarMinimized .navGroup summary::after{display:none !important;}
+body.sidebarMinimized .navGroup summary::before{font-size:15px !important;color:#fff !important;font-weight:950 !important;letter-spacing:0 !important;background:rgba(255,255,255,.13) !important;width:38px !important;height:38px !important;border-radius:13px !important;display:flex !important;align-items:center !important;justify-content:center !important;}
+body.sidebarMinimized .navGroup:nth-of-type(1) summary::before{content:"B" !important;}
+body.sidebarMinimized .navGroup:nth-of-type(2) summary::before{content:"↔" !important;}
+body.sidebarMinimized .navGroup:nth-of-type(3) summary::before{content:"A4" !important;}
+body.sidebarMinimized .navGroup .navList{display:none !important;max-height:0 !important;opacity:0 !important;padding:0 !important;}
+body.sidebarMinimized .themeBtn,body.sidebarMinimized .navGroup .navItem{display:none !important;}
+body.sidebarMinimized .shortcutBox{display:none !important;}
+body.sidebarMinimized .icon{width:38px;height:38px;border-radius:13px;}
+
+/* === Sicherung: Lösungen auf-/zudecken im Arbeitsblattbereich === */
+.sicherungToolbar{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  flex-wrap:wrap;
+  margin:0 0 12px;
+  padding:10px 12px;
+  border:1px solid var(--line);
+  border-radius:14px;
+  background:#f7fbff;
+  color:#173f67;
+  font-weight:800;
+}
+.sicherungToolbar span{font-size:14px;color:#5f6c7b;font-weight:800;}
+.revealBtn{
+  border:1px solid var(--line);
+  background:#fff;
+  color:#173f67;
+  border-radius:999px;
+  padding:8px 12px;
+  font-weight:900;
+  cursor:pointer;
+  transition:background .18s ease,color .18s ease,transform .18s ease,border-color .18s ease;
+}
+.revealBtn:hover{transform:translateY(-1px);border-color:#245a91;}
+.revealBtn.active{background:#245a91;color:#fff;border-color:#245a91;}
+.secureSolution{
+  display:inline-block;
+  cursor:pointer;
+  min-width:92%;
+  min-height:1.35em;
+  position:relative;
+}
+.secureSolution .secureContent{display:none;}
+.secureSolution .secureMask{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:100%;
+  min-height:1.45em;
+  border-radius:5px;
+  background:repeating-linear-gradient(135deg,#d9e7f5 0,#d9e7f5 7px,#eef5fc 7px,#eef5fc 14px);
+  color:#245a91;
+  border:1px solid #b7cde4;
+  font-size:.92em;
+  font-weight:800;
+  letter-spacing:.01em;
+  transition:transform .16s ease, box-shadow .16s ease, background .16s ease;
+}
+.secureSolution:hover .secureMask{box-shadow:0 2px 8px rgba(36,90,145,.18);transform:translateY(-1px);}
+.secureSolution.revealed .secureMask{display:none;}
+.secureSolution.revealed .secureContent{display:inline;}
+
+/* === Dashboard: Timer-Kasten unter der Situation === */
+.boardGridRefined.dashboardFitGrid{
+  grid-template-areas:
+    "situation side"
+    "timer side"
+    "actions side" !important;
+  grid-template-rows:auto minmax(118px, .55fr) auto !important;
+}
+.timerPanel{
+  grid-area:timer;
+  padding:0 !important;
+  overflow:hidden;
+  min-height:118px;
+  box-shadow:0 16px 42px rgba(18,62,103,.11);
+  align-self:stretch;
+}
+.timerHead{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  padding:12px 18px;
+  background:linear-gradient(135deg,#f7fbff,#edf5fd);
+  border-bottom:1px solid var(--line);
+  color:#174a7b;
+  font-weight:950;
+  font-size:18px;
+}
+.timerHint{
+  color:#5b6675;
+  font-size:12px;
+  text-transform:uppercase;
+  letter-spacing:.08em;
+  font-weight:900;
+}
+.timerBody{
+  display:grid;
+  grid-template-columns:minmax(150px,.42fr) minmax(0,1fr);
+  align-items:center;
+  gap:16px;
+  padding:14px 18px 16px;
+}
+.timerDisplay{
+  font-variant-numeric:tabular-nums;
+  letter-spacing:.02em;
+  font-size:clamp(34px,4.4vw,58px);
+  line-height:1;
+  font-weight:950;
+  color:#123e67;
+  text-align:center;
+  padding:10px 12px;
+  border-radius:18px;
+  background:#e8f2fb;
+  border:1px solid #cfe0ef;
+}
+.timerControls{
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  gap:10px;
+  min-width:0;
+}
+.timerInputLabel{
+  display:flex;
+  align-items:center;
+  gap:7px;
+  border:1px solid var(--line);
+  background:#fff;
+  border-radius:13px;
+  padding:8px 10px;
+  color:#174a7b;
+  font-weight:900;
+}
+.timerInputLabel span{font-size:13px;color:#5b6675;text-transform:uppercase;letter-spacing:.06em;}
+.timerInputLabel input{
+  width:64px;
+  border:0;
+  outline:0;
+  color:#123e67;
+  font-weight:950;
+  font-size:18px;
+  background:transparent;
+}
+.timerBtn{padding:9px 13px !important;white-space:nowrap;}
+.timerBtn:disabled,.timerInputLabel input:disabled{opacity:.55;cursor:not-allowed;}
+.timerDone .timerDisplay{animation:timerPulse .8s ease 0s 3;background:#fff4df;border-color:#f2c46b;color:#8b4f00;}
+@keyframes timerPulse{0%,100%{transform:scale(1)}50%{transform:scale(1.025)}}
+@media (max-height:780px){
+  .timerPanel{min-height:102px;}
+  .timerHead{padding:9px 16px;font-size:16px;}
+  .timerBody{padding:10px 16px 12px;gap:12px;}
+  .timerDisplay{font-size:clamp(30px,3.6vw,46px);padding:8px 10px;}
+  .timerBtn{padding:8px 10px !important;}
+  .timerInputLabel{padding:7px 9px;}
+}
+@media (max-width:1100px){
+  .boardGridRefined.dashboardFitGrid{
+    grid-template-areas:"situation" "timer" "side" "actions" !important;
+    grid-template-columns:1fr !important;
+    grid-template-rows:auto auto auto auto !important;
+    height:auto !important;
+  }
+  .timerBody{grid-template-columns:1fr;}
+  .timerDisplay{text-align:left;}
+}
+
+/* Fix: Timer-Kasten passt sich seinem Inhalt an und wird nicht abgeschnitten */
+.boardGridRefined.dashboardFitGrid{
+  grid-template-rows:auto auto minmax(96px,1fr) !important;
+}
+.timerPanel{
+  min-height:unset !important;
+  height:auto !important;
+  align-self:start !important;
+  overflow:visible !important;
+}
+.timerHead{
+  min-height:44px;
+}
+.timerBody{
+  min-height:76px;
+  padding-bottom:18px !important;
+}
+.timerDisplay{
+  min-width:0;
+}
+@media (max-height:780px){
+  .timerPanel{min-height:unset !important;}
+  .timerBody{min-height:68px;padding-bottom:14px !important;}
+}
+
+/* Update: Timer auf dem Dashboard weniger prominent platzieren */
+.boardGridRefined.dashboardFitGrid{
+  grid-template-rows:auto auto 1fr !important;
+}
+.timerPanel{
+  width:min(420px, 56%) !important;
+  min-height:unset !important;
+  align-self:start !important;
+  justify-self:start !important;
+  box-shadow:0 10px 26px rgba(18,62,103,.08) !important;
+  border-radius:18px !important;
+}
+.timerHead{
+  min-height:34px !important;
+  padding:7px 13px !important;
+  font-size:15px !important;
+}
+.timerHint{
+  font-size:10px !important;
+  letter-spacing:.07em !important;
+}
+.timerBody{
+  min-height:unset !important;
+  padding:9px 12px 11px !important;
+  grid-template-columns:minmax(96px,130px) 1fr !important;
+  gap:10px !important;
+}
+.timerDisplay{
+  font-size:clamp(25px, 2.8vw, 38px) !important;
+  padding:7px 9px !important;
+  border-radius:14px !important;
+}
+.timerControls{
+  gap:7px !important;
+}
+.timerInputLabel{
+  padding:6px 8px !important;
+  border-radius:11px !important;
+}
+.timerInputLabel span{font-size:11px !important;}
+.timerInputLabel input{width:48px !important;font-size:15px !important;}
+.timerBtn{padding:7px 9px !important;font-size:13px !important;}
+@media (max-height:780px){
+  .timerPanel{width:min(380px, 58%) !important;}
+  .timerHead{padding:6px 12px !important;font-size:14px !important;}
+  .timerBody{padding:8px 11px 10px !important;}
+  .timerDisplay{font-size:clamp(23px,2.5vw,34px) !important;}
+}
+@media (max-width:1100px){
+  .timerPanel{width:100% !important;}
+  .timerBody{grid-template-columns:1fr !important;}
+}

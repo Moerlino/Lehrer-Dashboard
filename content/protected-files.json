@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "policy": "Protected source documents and embedded applications are immutable release assets. They may only be replaced or edited after an explicit user request naming the document or application.",
+  "files": {
+    "handbooks/Lehrerhandbuch_Literarische_Texte_2BFS_Kfz.html": "ea155b3f5286dd5a457dd56f1240b5d3a436468f6d5b1c049043a253b29937e4",
+    "handbooks/Lehrerhandbuch_Modernes_Maerchen_Einzelstunde_2BFS_Kfz.html": "4284ca1a9faafb542615358741147ae62ddb82e155df183896cc80f82796b4e6",
+    "apps/sprachinseln/assets/css/print.css": "bc89825aeb21804b3d3b9090a54304bc9136d9aa9c6272853afa6d1a412d66ff",
+    "apps/sprachinseln/assets/css/style.css": "9323230819e885c49123fd048e86ed15dd4bbc0797a62da3e8c6410c985aa76b",
+    "apps/sprachinseln/assets/js/app.js": "6135d81512b80283eeae22e6932a8b9d084feabd2e1c72989dcf82893b4eb2c3",
+    "apps/sprachinseln/assets/js/data.js": "a17d7db23ddb3dea9494c4cd74085c3cd23bbe48699526cbd3c80d68ada2745f",
+    "apps/sprachinseln/docs/README.md": "94dd19830db4cb48f025d35196d05a0d4c06be51a326575f789d87dd645ba724",
+    "apps/sprachinseln/index.html": "205290bd47e28913052f27b56c1c3cf86206c022305ad72705091e6ec43e7f08",
+    "handbooks/Lehrerhandbuch_SHK_Sprachlicher_Feinschliff.html": "2573b8be03dab886d5b0bfc97c4b829b9d159789befbca951b48f5a92c93ac2c"
+  }
+}
