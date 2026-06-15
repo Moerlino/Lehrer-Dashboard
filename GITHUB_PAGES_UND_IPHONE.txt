@@ -1,0 +1,53 @@
+UNTERRICHTSDASHBOARD 1.8.1 – GITHUB PAGES UND IPHONE
+=====================================================
+
+WICHTIG VOR DEM HOCHLADEN
+-------------------------
+GitHub Pages veröffentlicht die Dateien des Repositorys als Website. Alle fest im Repository enthaltenen
+Handbücher, Importpakete und Präsentationen sind dadurch über die Website-Adresse abrufbar.
+Personenbezogene Notenbuchdaten werden NICHT in das Repository geschrieben. Sie bleiben im jeweiligen
+Browser in IndexedDB gespeichert.
+
+ERSTMALIGE VERÖFFENTLICHUNG
+---------------------------
+1. Auf GitHub ein neues Repository anlegen.
+2. Den INHALT dieses Ordners in die Wurzel des Repositorys hochladen. Nicht den übergeordneten Ordner.
+3. Die Dateien committen und in den Branch main pushen.
+4. Repository → Settings → Pages öffnen.
+5. Unter Build and deployment als Source „GitHub Actions“ wählen.
+6. Unter Actions den Workflow „GitHub Pages“ abwarten.
+7. Die veröffentlichte Pages-Adresse öffnen.
+
+IPHONE / IPAD
+-------------
+1. Die GitHub-Pages-Adresse in Safari öffnen.
+2. Teilen-Symbol antippen.
+3. „Zum Home-Bildschirm“ wählen.
+4. Die App anschließend über das neue Home-Bildschirm-Symbol starten.
+
+DATENÜBERNAHME VON LOCALHOST
+----------------------------
+Die Pages-Adresse ist technisch eine andere Herkunft als localhost:4173. Deshalb sind dort zunächst keine
+lokalen Klassen, Noten, importierten Einheiten oder Präsentationen vorhanden.
+
+Vorher in der lokalen App:
+- Notenbuch → Sicherung exportieren.
+- Einheiten verwalten → Bibliothekssicherung exportieren.
+
+Danach in der Pages-App:
+- Notenbuchsicherung wiederherstellen.
+- Bibliothekssicherung wiederherstellen.
+
+MOBILE BESONDERHEITEN
+---------------------
+- Daten sind pro Gerät, Browser und Website-Adresse getrennt.
+- Das Löschen von Safari-Websitedaten entfernt auch lokale App-Daten.
+- Vor wichtigen Änderungen regelmäßig Sicherungen exportieren und außerhalb der App aufbewahren.
+- Auf dem iPhone werden Notenbuchtabellen horizontal gewischt; Namen und Gesamtwert bleiben links fixiert.
+
+OFFLINE-TEST
+------------
+1. App einmal vollständig online öffnen.
+2. Über das Home-Bildschirm-Symbol starten.
+3. Flugmodus aktivieren und App erneut öffnen.
+4. Bereits geladene App-Bereiche sollten weiterhin verfügbar sein.

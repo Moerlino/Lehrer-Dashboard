@@ -1,0 +1,33 @@
+SCHRITT 4 – IMPORTVERWALTUNG
+
+Version: UnterrichtsDashboard v0.9.0-import-beta
+
+DIESE BETA KANN
+- Einheitspakete nach Importstandard 1.0 vollständig prüfen.
+- Vor jeder Speicherung eine Importvorschau anzeigen.
+- Konflikte über die stabile Paket-ID erkennen.
+- eine vorhandene Einheit atomar ersetzen oder das Paket als Kopie importieren.
+- importierte Einheiten einzeln entfernen und wieder exportieren.
+- vor Ersetzen, Entfernen oder Leeren automatisch Wiederherstellungspunkte anlegen.
+- ältere Fassungen aus einem Wiederherstellungspunkt erneut einsetzen.
+
+ATOMARE VERARBEITUNG
+Die betroffene Einheit und ihr Wiederherstellungspunkt werden in derselben IndexedDB-Transaktion geschrieben. Schlägt die Transaktion fehl, bleibt die vorhandene Einheit unverändert.
+
+TESTABLAUF
+1. start-dashboard.command oder start-dashboard.bat öffnen.
+2. „Importierte Einheiten (Beta)“ aufrufen.
+3. „Referenzpaket laden“ wählen.
+4. Importvorschau prüfen und „Einheit importieren“ bestätigen.
+5. Dasselbe Paket erneut laden. Nun erscheinen die Optionen „Vorhandene ersetzen“, „Als Kopie importieren“ und „Abbrechen“.
+6. Eine installierte Einheit exportieren oder entfernen.
+7. Im Bereich „Wiederherstellungspunkte“ eine Sicherung wiederherstellen.
+
+DATENSCHUTZ
+Alle Verarbeitungsschritte erfolgen lokal im Browser. Die Paketdateien werden nicht hochgeladen.
+
+NICHT BESTANDTEIL DIESES SCHRITTS
+- vollständige Sicherung der gesamten Unterrichtsbibliothek
+- Wiederherstellung einer gesamten Bibliothek
+- endgültige Ablösung der fest eingebauten Inhalte
+- automatische PWA-Installation oder Desktop-Verpackung

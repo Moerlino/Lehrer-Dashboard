@@ -1,0 +1,23 @@
+SCHRITT 8 – PRODUKTFREIGABE UND BEREINIGUNG
+Version 1.3.0
+
+ERGEBNIS
+Das dynamische Importsystem ist der reguläre Inhaltsweg des UnterrichtsDashboards. Die Beta-Kennzeichnung und der manuelle Abnahmeschritt wurden aus der Benutzeroberfläche entfernt.
+
+UMSETZUNG
+- Importierte Einheiten erscheinen automatisch unter Schulform, Fach und Lernjahr.
+- Die zwei bisherigen Bestandseinheiten werden beim ersten Produktstart einmalig in die lokale Bibliothek übernommen.
+- Bereits vorhandene Bibliotheksdaten unter http://localhost:4173 bleiben erhalten.
+- Statische Ausgangsfassungen sind aus der normalen Navigation ausgeblendet und nur noch im Rückfallarchiv der Verwaltung erreichbar.
+- Neue oder aktualisierte Einheitspakete gelten nach erfolgreicher technischer Prüfung direkt als aktive Einheiten.
+- Import, Aktualisierung, Export, Entfernen, Gesamtsicherung und Wiederherstellung bleiben verfügbar.
+- Lehrerhandbücher und Sprachinseln-Originaldateien bleiben prüfsummengeschützt.
+
+RÜCKFALLSTRATEGIE
+1. Vor größeren Importen oder Updates die Unterrichtsbibliothek sichern.
+2. Bei einem fehlerhaften Einheitenupdate den automatisch erzeugten Wiederherstellungspunkt verwenden.
+3. Bei Problemen mit einer vorinstallierten Bestandseinheit kann deren statische Archivfassung über „Einheiten verwalten“ geöffnet werden.
+4. Die vorherige Testversion v1.2.2 bleibt als externe Rückfallversion unverändert.
+
+NÄCHSTER REGULÄRER ARBEITSABLAUF
+Neue Unterrichtseinheiten werden künftig als .unterricht.zip-Paket erstellt und über „Einheiten verwalten“ importiert. Ein Neubau der gesamten App ist für reine Inhaltszugänge nicht mehr erforderlich.

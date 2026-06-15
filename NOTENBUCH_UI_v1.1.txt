@@ -1,0 +1,15 @@
+NOTENBUCH-OBERFLÄCHE v1.1
+
+Die Klassenübersicht nutzt eine Mosaikdarstellung mit farbigen Klassenkarten.
+In der Klassenansicht sind Gesamtnote, schriftliche Leistungen und mündliche Leistungen als getrennte farbige Bereiche sichtbar.
+
+Bedienung
+- Plus oben oder unten rechts: neue Klasse
+- Pfeil nach unten: Notenbuch sichern
+- Pfeil nach oben: Sicherung wiederherstellen
+- Kreis-Symbol: Datenschutzmodus
+- Plus in der grünen Tabellenüberschrift: schriftliche Leistung
+- Plus in der gelben Tabellenüberschrift: mündliche Leistung
+- Gewichtung und Sortierung: einklappbarer Bereich oberhalb der Matrix
+
+Alle Daten bleiben ausschließlich lokal in der bestehenden IndexedDB gespeichert.

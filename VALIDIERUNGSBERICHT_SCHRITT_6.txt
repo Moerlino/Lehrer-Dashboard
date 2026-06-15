@@ -1,0 +1,17 @@
+VALIDIERUNGSBERICHT – SCHRITT 6
+
+App-Version: 1.1.0-migration-beta
+
+Erfolgreich geprüft:
+- Schnellprüfung der App-Kernstruktur
+- JavaScript-Syntax der dynamischen Bibliothek
+- Prüfsummen aller geschützten Originaldateien
+- ZIP-Integrität beider Migrationspakete
+- SHA-256-Integrität aller im Manifest referenzierten Paketdateien
+- Stundenverweise und lesson.json-Dateien
+
+Migrationspaket 1: 04 Sprachlicher Feinschliff · 8 Stunden
+Migrationspaket 2: Literarische Texte verstehen · 8 Stunden, davon 1 vollständig und 7 Platzhalter
+
+Ergebnis: GÜLTIG – Schritt 6 ist technisch vorbereitet.
+Browserbasierter Vergleich erfolgt über die zwei Fassungs-Buttons im Migrationsbereich.

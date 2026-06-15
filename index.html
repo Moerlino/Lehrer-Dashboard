@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#173b5e">
+  <meta name="description" content="Modulares Unterrichtsdashboard für berufliche Schulen">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="UnterrichtsDashboard">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="app-version" content="1.8.1">
+  <title>UnterrichtsDashboard</title>
+  <link rel="manifest" href="manifest.webmanifest?v=1.8.1">
+  <link rel="icon" href="assets/icons/logo.svg?v=1.8.1" type="image/svg+xml">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png?v=1.8.1">
+  <link rel="stylesheet" href="assets/css/app.css?v=1.8.1">
+</head>
+<body>
+  <div id="app" class="app-shell" aria-live="polite">
+    <noscript>Für das Dashboard muss JavaScript aktiviert sein.</noscript>
+  </div>
+  <script>
+    window.UD={catalog:null,lessons:{},sections:{},errors:[]};
+    window.UD.moduleError=function(src){this.errors.push({type:'load',src:src});};
+    window.UD.registerLesson=function(meta){try{this.lessons[meta.id]=Object.freeze(meta)}catch(e){this.errors.push({type:'lesson',src:meta&&meta.id,error:e.message})}};
+    window.UD.registerSection=function(lessonId,sectionId,payload){try{this.sections[lessonId]=this.sections[lessonId]||{};this.sections[lessonId][sectionId]=Object.freeze(payload)}catch(e){this.errors.push({type:'section',src:lessonId+'/'+sectionId,error:e.message})}};
+  </script>
+  <script src="content/catalog.js?v=1.8.1" defer onerror="window.UD.moduleError(this.src)"></script>
+  <script src="content/lessons/modernes-maerchen/meta.js" defer onerror="window.UD.moduleError(this.src)"></script>
+  <script src="content/lessons/modernes-maerchen/analysis.js" defer onerror="window.UD.moduleError(this.src)"></script>
+  <script src="content/lessons/modernes-maerchen/profile.js" defer onerror="window.UD.moduleError(this.src)"></script>
+  <script src="content/lessons/modernes-maerchen/sequence.js" defer onerror="window.UD.moduleError(this.src)"></script>
+  <script src="content/lessons/modernes-maerchen/teaching.js" defer onerror="window.UD.moduleError(this.src)"></script>
+  <script src="content/lessons/modernes-maerchen/materials.js" defer onerror="window.UD.moduleError(this.src)"></script>
+  <script src="content/lessons/modernes-maerchen/help.js" defer onerror="window.UD.moduleError(this.src)"></script>
+  <script src="apps/sprachinseln/assets/js/data.js" defer onerror="window.UD.moduleError(this.src)"></script>
+  <script src="assets/js/sprachinseln-integration.js?v=1.8.1" defer onerror="window.UD.moduleError(this.src)"></script>
+  <script src="assets/js/dynamic-library.js?v=1.8.1" defer onerror="window.UD.moduleError(this.src)"></script>
+  <script src="assets/js/presentations.js?v=1.8.1" defer onerror="window.UD.moduleError(this.src)"></script>
+  <script src="assets/js/gradebook.js?v=1.8.1" defer onerror="window.UD.moduleError(this.src)"></script>
+  <script src="assets/js/install-helper.js?v=1.8.1" defer></script>
+  <script src="assets/js/app.js?v=1.8.1" defer></script>
+</body>
+</html>

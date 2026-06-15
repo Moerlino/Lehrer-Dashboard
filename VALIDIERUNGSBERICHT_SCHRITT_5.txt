@@ -1,0 +1,29 @@
+VALIDIERUNGSBERICHT – SCHRITT 5
+Version: 1.0.0-import-beta
+Datum: 2026-06-14
+
+GEPRÜFT
+- Kernstruktur und alle lokalen Verweise
+- JavaScript-Syntax von App, dynamischer Bibliothek und Inhaltsmodulen
+- Python-Syntax des stabilen lokalen Starters
+- unveränderte SHA-256-Prüfsummen aller geschützten Originaldateien
+- einheitliche Versionsangaben in Katalog, PWA-Manifest und Service Worker
+- lokaler Serverstart auf http://localhost:4173
+- Bindung ausschließlich an 127.0.0.1
+- Auslieferung der index.html durch den lokalen Starter
+- ZIP-Struktur und Integrität des vollständigen Release-Pakets
+
+IMPLEMENTIERTE SICHERHEITSMERKMALE
+- Gesamtsicherung als .unterrichtsbibliothek.zip
+- SHA-256-Prüfung jedes eingebetteten Einheitspakets vor Wiederherstellung
+- Vorschau vor vollständiger Wiederherstellung oder Zusammenführung
+- atomare IndexedDB-Transaktion
+- interne Sicherung des aktiven Bestands vor vollständigem Ersetzen
+- fester Browser-Ursprung localhost:4173 zum Erhalt der IndexedDB über App-Updates
+- optionaler Antrag auf dauerhaften Browser-Speicher
+
+HINWEIS
+Die abschließende Interaktionsprüfung von Download, Dateiauswahl und Browserdialogen muss im tatsächlich verwendeten Desktopbrowser erfolgen. Die Ausführungsumgebung erlaubte keinen automatisierten Zugriff eines Headless-Browsers auf lokale Seiten. Statische Prüfungen und der lokale Server-Smoke-Test waren erfolgreich.
+
+ERGEBNIS
+BESTANDEN – Release kann als Import-Beta getestet werden.

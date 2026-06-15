@@ -1,0 +1,8 @@
+NOTENBUCH UI v1.2 – UnterrichtsDashboard 1.6.2
+
+Überarbeitete Bedienelemente:
+- Plus-Schaltflächen nutzen zentrierte Vektoricons.
+- CSV-Import nutzt ein eigenes Dokument-/Tabellen-Icon mit Importpfeil.
+- Datenschutzmodus nutzt ein Inkognito-Symbol; bei aktivem Sichtschutz wird ein Auge zum Wiederanzeigen dargestellt.
+- Klassenkarten zeigen unten rechts einen klar abgegrenzten Öffnen-Chip mit Chevron.
+- Die bisherige dekorative Drei-Punkte-Anzeige wurde entfernt, um Überlagerungen zu vermeiden.

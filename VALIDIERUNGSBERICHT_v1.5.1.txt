@@ -1,0 +1,13 @@
+UnterrichtsDashboard v1.5.1 – Validierungsbericht
+
+Änderung:
+- Stundenkennzeichnungen mit Schrägstrich passen sich in der Breite an.
+- Normale Kartenicons bleiben 44 x 44 Pixel groß.
+
+Geprüft:
+- CSS-Syntax strukturell geprüft.
+- JavaScript-Syntax für app.js und dynamic-library.js geprüft.
+- Markierung lesson-number in statischen und dynamischen Stundenkarten vorhanden.
+- Probe mit 01, 02/03, 05/06, 08/09 und 11/12 visuell gerendert.
+- Service-Worker- und App-Version auf 1.5.1 aktualisiert.
+- ZIP-Integrität und macOS-Starterrechte geprüft.

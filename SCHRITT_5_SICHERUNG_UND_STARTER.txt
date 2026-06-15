@@ -1,0 +1,20 @@
+SCHRITT 5 – LOKALER STARTER, BIBLIOTHEKSSICHERUNG UND WIEDERHERSTELLUNG
+
+Version: 1.0.0-import-beta
+
+Umgesetzt:
+- vollständige Sicherung aller importierten Einheiten in einer .unterrichtsbibliothek.zip-Datei
+- Einbezug der internen Wiederherstellungspunkte und lokaler Dashboard-Einstellungen
+- vollständige Wiederherstellung oder kontrollierte Zusammenführung
+- Prüfung aller eingebetteten Einheitspakete und SHA-256-Prüfsummen vor der Übernahme
+- atomare Datenbanktransaktion bei der Wiederherstellung
+- interner Wiederherstellungspunkt des aktiven Bestands vor vollständigem Ersetzen
+- optionaler Antrag auf dauerhaften Browser-Speicher
+- fester lokaler Ursprung http://localhost:4173 für stabile IndexedDB-Daten
+- lokaler Server bindet nur an 127.0.0.1
+- PWA-Manifest und Service Worker für installierbaren Offlinebetrieb vorbereitet
+
+Wichtig:
+Die Bibliothek bleibt an die Browser-Origin http://localhost:4173 gebunden. Deshalb darf der Starter nicht auf wechselnde Ports ausweichen. Für Gerätewechsel oder Browserwechsel ist die Bibliothekssicherung zu verwenden.
+
+Produktivversion v0.7.0 wurde nicht verändert.

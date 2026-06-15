@@ -1,0 +1,23 @@
+VALIDIERUNGSBERICHT – UNTERRICHTSDASHBOARD 1.8.0
+================================================
+
+Geprüft:
+- relative App-Pfade für GitHub-Pages-Projektseiten
+- GitHub-Actions-Workflow für Pages
+- .nojekyll vorhanden
+- Manifest start_url und scope relativ
+- Service-Worker-Cache Version 1.8.0
+- PNG-App-Icons 192, 512, 180 und maskable vorhanden
+- Apple-Web-App-Metadaten vorhanden
+- Installationshinweis für iOS vorhanden
+- mobile Safe-Area-Regeln vorhanden
+- mobile Dialoge, Eingabefelder und Touch-Ziele angepasst
+- Notenbuch auf kleinen Displays horizontal scrollbar
+- JavaScript-Syntaxprüfung erfolgreich
+- JSON-Manifest parsebar
+- ZIP-Integrität erfolgreich
+
+Nicht automatisiert geprüft:
+- Installation auf einem physischen iPhone
+- tatsächliche GitHub-Pages-Veröffentlichung in einem Benutzerrepository
+- langfristiges Safari-Speicherverhalten

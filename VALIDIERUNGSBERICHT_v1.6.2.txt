@@ -1,0 +1,14 @@
+VALIDIERUNGSBERICHT – UnterrichtsDashboard v1.6.2
+
+Änderungsumfang
+- Ausschließlich Notenbuch-Oberfläche und Versionsangaben angepasst.
+- Datenmodell und lokale IndexedDB-Speicherung unverändert.
+- Unterrichtseinheiten, Handbücher und Präsentationen unverändert.
+
+Prüfungen
+- JavaScript-Syntaxprüfung: erfolgreich
+- Dashboard-Schnellprüfung: erfolgreich
+- Inline-SVG-Icons besitzen aria-hidden/focusable=false; Schaltflächen besitzen aussagekräftige aria-labels
+- Plus-Icons werden über Flex-Zentrierung positioniert
+- CSV-Import-Icon, Inkognito-Icon und Öffnen-Chip vorhanden
+- ZIP-Integrität und Starterrechte geprüft

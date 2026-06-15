@@ -1,0 +1,11 @@
+PRÄSENTATIONEN PRO STUNDE – FORMAT 1.0
+
+Unterstützt werden eigenständige HTML-Dateien. CSS, JavaScript und Bilder sollten in die HTML-Datei eingebettet sein.
+
+Optionale automatische Zuordnung im <head>:
+<meta name="ud-unit-id" content="ID-DER-EINHEIT">
+<meta name="ud-lesson-id" content="ID-DER-STUNDE">
+<meta name="ud-presentation-title" content="Titel der Präsentation">
+
+Ohne Metadaten kann die Zielstunde beim Import ausgewählt werden.
+Die Präsentation wird sandboxed ausgeführt und getrennt von der Unterrichtseinheit gespeichert.

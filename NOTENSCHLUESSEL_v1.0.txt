@@ -1,0 +1,37 @@
+UnterrichtsDashboard v1.7.0
+Notenschlüssel und Punkteingabe
+
+1. Leistung anlegen
+In einer Klasse unter „Schriftlich“ oder „Mündlich“ eine neue Leistung anlegen.
+Als Eingabeart kann gewählt werden:
+- Dezimalnote direkt eingeben
+- Punkte mit Notenschlüssel umwandeln
+
+2. Notenschlüssel
+Für eine Punktebewertung werden festgelegt:
+- Maximalpunktzahl
+- Mindestprozent für 1,0
+- Mindestprozent für 2,0
+- Mindestprozent für 3,0
+- Mindestprozent für 4,0
+- Mindestprozent für 5,0
+
+Die Standardwerte sind 92 / 81 / 67 / 50 / 30 Prozent.
+Zwischen den festgelegten Werten berechnet die App stufenlos Dezimalnoten.
+Beispiel: Ein Ergebnis zwischen der Grenze für 2,0 und der Grenze für 3,0 erhält eine entsprechend interpolierte Dezimalnote.
+
+3. Eingabe in der Matrix
+Bei einer Punkte-Leistung wird in der Zelle die Punktzahl eingegeben.
+Die App zeigt anschließend:
+- oben die berechnete Dezimalnote,
+- darunter die eingegebene Punktzahl im Verhältnis zur Maximalpunktzahl.
+
+Leere Felder werden nicht berechnet. Zulässig sind Werte von 0 bis zur festgelegten Maximalpunktzahl.
+
+4. Leistung bearbeiten
+Über das Zahnrad in der Spaltenüberschrift können Titel, Eingabeart, Maximalpunktzahl und Notenschlüssel geändert werden.
+Wird ein vorhandener Notenschlüssel verändert, werden alle bereits eingetragenen Punktwerte mit dem neuen Schlüssel neu berechnet.
+Beim Wechsel zwischen Direktnote und Punkteingabe werden vorhandene Einträge dieser Leistung aus Sicherheitsgründen gelöscht, da sie nicht eindeutig umgerechnet werden können.
+
+5. Speicherung
+Punktzahlen, berechnete Dezimalnoten und Notenschlüssel werden ausschließlich lokal in der Notenbuch-Datenbank gespeichert und in der Notenbuch-Sicherung mitgesichert.

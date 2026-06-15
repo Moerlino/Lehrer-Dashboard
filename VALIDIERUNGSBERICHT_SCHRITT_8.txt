@@ -1,0 +1,34 @@
+VALIDIERUNGSBERICHT – SCHRITT 8
+UnterrichtsDashboard v1.3.0
+
+ERGEBNIS
+BESTANDEN – Produktivversion kann regulär verwendet werden.
+
+GEPRÜFTE PUNKTE
+- JavaScript-Syntax von App-Kern, Unterrichtsbibliothek, Katalog, Stundenmodulen und Sprachinseln
+- Vollständigkeit der Kernstruktur und aller lokalen Datei-Verweise
+- SHA-256-Prüfsummen aller geschützten Lehrerhandbücher und Sprachinseln-Originaldateien
+- Gültigkeit beider vorinstallierten .unterricht.zip-Pakete nach Importstandard 1.0
+- eindeutige Paketmanifeste, Einheiten-IDs und Stundenanzahlen
+- einmalige Produktmigration der vorinstallierten Bestandseinheiten über einen lokalen Migrationsmarker
+- automatische reguläre Einsortierung importierter Einheiten
+- Ausblendung statischer Doppelungen bei vorhandener Importfassung
+- Erreichbarkeit statischer Ausgangsfassungen ausschließlich über das Rückfallarchiv
+- unmittelbare Aktivierung erfolgreich geprüfter Neuimporte und Aktualisierungen
+- Bibliothekssicherung, Wiederherstellungspunkte und Exportpfade auf Quelltextebene
+- aktualisierte PWA-Version und eigener Service-Worker-Cache v1.3.0
+- ZIP-Struktur und macOS-Ausführungsrechte der Starterdateien
+- Druckkorrektur aus v1.2.2 unverändert übernommen: ein Druckauftrag pro Klick
+
+AUTOMATISIERTE ERGEBNISSE
+- tools/quick_check.py: erfolgreich
+- node --check assets/js/app.js: erfolgreich
+- node --check assets/js/dynamic-library.js: erfolgreich
+- geschützte Dateien: 9 von 9 Prüfsummen korrekt
+- vorinstallierte Pakete: 2 von 2 gültig
+  - 04 Sprachlicher Feinschliff: 8 Stunden
+  - Literarische Texte verstehen: 8 Stunden
+- ZIP-Integritätsprüfung: erfolgreich
+
+UMGEBUNGSGRENZE
+Lokale HTTP-Aufrufe und vollständige Browser-Klicktests sind in der Arbeitsumgebung administrativ blockiert. IndexedDB, Dateiauswahldialoge, automatischer Erstimport und sichtbare Navigation müssen deshalb einmal im verwendeten Desktopbrowser über „Dashboard starten.command“ praktisch geprüft werden. Die statischen, strukturellen und syntaktischen Prüfungen waren vollständig erfolgreich.

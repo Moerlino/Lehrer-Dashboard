@@ -1,0 +1,27 @@
+VALIDIERUNGSBERICHT – SCHRITT 4 IMPORTVERWALTUNG
+
+Version: UnterrichtsDashboard v0.9.0-import-beta
+
+AUTOMATISCH GEPRÜFT
+✓ JavaScript-Syntax der App und der dynamischen Importbibliothek
+✓ alle statischen Script- und Stylesheet-Verweise
+✓ SHA-256-Prüfsummen aller geschützten Originaldateien
+✓ ZIP-Integrität des vollständigen Releasepakets
+✓ ZIP-Erzeuger für den Re-Export importierter Einheiten (Testarchiv mit manifest.json, Handbuch und Zusatzdatei)
+✓ Service-Worker-Verweis auf die dynamische Importbibliothek
+
+IMPLEMENTIERTE TRANSAKTIONSGRENZEN
+✓ Ersetzen: Sicherung und neue Einheit in einer IndexedDB-Transaktion
+✓ Entfernen: Sicherung und Löschung in einer IndexedDB-Transaktion
+✓ Leeren: Sicherung aller Einheiten und Löschung in einer IndexedDB-Transaktion
+✓ Wiederherstellen: optionaler Sicherungspunkt des aktuellen Stands und Wiederherstellung in einer Transaktion
+
+MANUELLER FUNKTIONSTEST NACH DEM ENTPACKEN
+1. Referenzpaket laden und Importvorschau prüfen.
+2. Import bestätigen.
+3. Paket erneut laden und Konfliktoptionen prüfen.
+4. Als Kopie importieren.
+5. Einheit exportieren und das erzeugte ZIP erneut in der Vorschau öffnen.
+6. Einheit entfernen und über den Wiederherstellungspunkt zurückholen.
+
+Hinweis: Die vorhandene Produktivversion v0.7.0 wurde nicht verändert.

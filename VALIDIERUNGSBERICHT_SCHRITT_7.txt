@@ -1,0 +1,31 @@
+VALIDIERUNGSBERICHT SCHRITT 7
+
+Version: 1.2.1-testbereit-beta
+Datum: 2026-06-14
+
+ERGEBNIS
+Die statischen Prüfungen und die automatisierte Logikprüfung waren erfolgreich.
+
+GEPRÜFT
+- JavaScript-Syntax von app.js und dynamic-library.js mit node --check
+- vollständige Kernstruktur über tools/quick_check.py
+- unveränderte SHA-256-Prüfsummen aller geschützten Originaldateien
+- vorhandene Script-, Link-, Material- und Importpaket-Verweise
+- Versionsstände in Katalog, Manifest und Service Worker
+- reguläre Zuordnung beider Migrationspakete zu ihren statischen Unterrichtspfaden
+- Übereinstimmung von Stundenanzahl, Stunden-IDs und Bearbeitungsständen
+- Vorhandensein von Arbeitsblatt, Musterlösung und Sicherung bei allen ausgearbeiteten Stunden
+- Zusammenführung statischer und dynamischer Einheiten ohne doppelte SHK-Karte
+- Speicherung und Rücknahme des Abnahmestatus
+- Zurücksetzen der Abnahme bei Aktualisieren, Entfernen, Leeren und Einzelwiederherstellung
+- Übernahme des Abnahmestatus in die bestehende Bibliothekssicherung
+
+ERGEBNIS DER REFERENZPRÜFUNG
+- 04 Sprachlicher Feinschliff: 5 von 5 automatischen Abnahmekriterien erfüllt
+- Literarische Texte verstehen: 5 von 5 automatischen Abnahmekriterien erfüllt
+
+BROWSERPRÜFUNG
+Ein vollständiger automatisierter Klicktest mit dem im Arbeitscontainer vorhandenen Chromium konnte nicht ausgeführt werden, weil lokale HTTP- und file://-Aufrufe dort administrativ blockiert werden (ERR_BLOCKED_BY_ADMINISTRATOR). Die Browserdialoge, IndexedDB-Interaktion und sichtbare Abnahme sollten deshalb zusätzlich im verwendeten Desktopbrowser über den mitgelieferten lokalen Starter geprüft werden.
+
+ZIP-PRÜFUNG
+Die vollständige Release-ZIP wurde nach dem Verpacken mit unzip -t geprüft.

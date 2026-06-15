@@ -1,0 +1,15 @@
+SCHRITT 6 – KONTROLLIERTE BESTANDSMIGRATION
+
+Version: 1.1.0-migration-beta
+
+Migriert wurden als dynamische Referenzpakete:
+1. Berufsschule · Deutsch · 3. Lehrjahr · 04 Sprachlicher Feinschliff
+2. Zweijährige Berufsfachschule · Deutsch · 1. Jahr · Literarische Texte verstehen
+
+Die statischen Fassungen bleiben unverändert parallel erhalten. Im Bereich „Importierte Einheiten“ können beide Fassungen direkt geöffnet und verglichen werden.
+
+Bei „Literarische Texte verstehen“ wird der Bearbeitungsstand exakt erhalten: Die Stunde „Modernes Märchen“ ist vollständig dynamisch verfügbar; die sieben übrigen Stunden bleiben Strukturplatzhalter.
+
+Die Sprachinseln bleiben als geschützte eigenständige Anwendung im App-Kern, weil Paketstandard 1.0 Unterrichtseinheiten und keine eigenständigen Webanwendungen beschreibt.
+
+NÄCHSTER SCHRITT: Schritt 7 – Abnahme, Vergleich und Umschaltung auf die dynamische Bibliothek als regulären Inhaltsweg.

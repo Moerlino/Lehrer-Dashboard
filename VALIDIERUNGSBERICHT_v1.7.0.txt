@@ -1,0 +1,43 @@
+UnterrichtsDashboard v1.7.0 – Validierungsbericht
+Datum: 15.06.2026
+
+Änderungsumfang
+- Schlichtes Zahnrad-Symbol für Klassen- und Leistungseinstellungen.
+- Neue Eingabeart „Punkte mit Notenschlüssel umwandeln“ pro Leistung.
+- Einstellbare Maximalpunktzahl.
+- Einstellbare Prozentanker für die Dezimalnoten 1,0 / 2,0 / 3,0 / 4,0 / 5,0.
+- Stufenlose lineare Umrechnung zwischen den Ankerwerten; 0 Prozent entspricht 6,0.
+- Berechnete Dezimalnote groß in der Matrix, Punktzahl darunter kleiner.
+- Neuberechnung vorhandener Punkteeinträge nach Änderung des Notenschlüssels.
+- Bestehende direkte Dezimalnoten bleiben unverändert kompatibel.
+
+Durchgeführte Prüfungen
+[OK] JavaScript-Syntax: app.js
+[OK] JavaScript-Syntax: gradebook.js
+[OK] JavaScript-Syntax: dynamic-library.js
+[OK] JavaScript-Syntax: presentations.js
+[OK] Schnellprüfung der Kernstruktur
+[OK] Prüfsummen der geschützten Unterrichtsdateien
+[OK] Render-Test einer Klasse mit Direktnote und Punkte-Leistung
+[OK] Punktumwandlung an den Ankerwerten: 1,0 bis 6,0
+[OK] Dezimalinterpolation zwischen den Ankerwerten
+[OK] Darstellung der Punktzahl unter der berechneten Note
+[OK] Bestehendes Sicherungsformat bleibt lesbar
+[OK] Aktive Versionsreferenzen auf 1.7.0 aktualisiert
+
+Standard-Notenschlüssel
+- 1,0 ab 92 %
+- 2,0 ab 81 %
+- 3,0 ab 67 %
+- 4,0 ab 50 %
+- 5,0 ab 30 %
+- 6,0 bei 0 %
+
+Hinweise
+- Die Werte können pro Leistung geändert werden.
+- Zwischen zwei Prozentankern wird die Dezimalnote linear berechnet.
+- Beim Wechsel der Eingabeart werden vorhandene Werte dieser Leistung gelöscht, da eine eindeutige Rückumwandlung nicht garantiert werden kann.
+- Vollständige Browser-Interaktion muss einmal auf dem Zielgerät praktisch geprüft werden.
+
+Ergebnis
+GÜLTIG – für den praktischen Test freigegeben.

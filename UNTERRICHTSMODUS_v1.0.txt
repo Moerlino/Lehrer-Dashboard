@@ -1,0 +1,16 @@
+UNTERRICHTSMODUS v1.0
+
+Start:
+1. Importierte Stunde öffnen.
+2. „Unterricht starten“ wählen.
+
+Funktionen:
+- Phasen werden aus dem Verlaufsplan der Stunde gelesen.
+- Der Timer startet für die jeweils ausgewählte Phase.
+- Start/Pause, +1 Minute und Reset sind verfügbar.
+- Präsentation, Materialien, Hilfen und Verlaufsplan sind direkt erreichbar.
+- „Zeit wird knapp“ öffnet Notausstieg und Minimalfahrplan.
+- Vollbild blendet die Browseroberfläche weitgehend aus.
+
+Hinweis:
+Der Timer läuft nur, solange der Unterrichtsmodus geöffnet bleibt. Beim Wechsel in ein Material oder eine Präsentation wird er pausiert. Die zuletzt ausgewählte Phase bleibt während der Browsersitzung gespeichert.

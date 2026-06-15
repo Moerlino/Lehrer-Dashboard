@@ -1,0 +1,22 @@
+VERBINDLICHER INTEGRATIONSWORKFLOW FÜR HTML-LEHRERHANDBÜCHER
+
+A. Originalschutz
+- Hochgeladenes HTML bytegenau unter handbooks/ speichern.
+- SHA-256 in content/protected-files.json ergänzen.
+- Original bei späteren App-Updates niemals automatisch verändern.
+
+B. App-Integration
+- Katalogeintrag mit Schulform, Fach, Lernjahr, Einheit und Stunde anlegen.
+- Vollständiges Handbuch über einen separaten Öffnen-Link anbieten.
+- Bereiche als isolierte Module unter content/lessons/<slug>/ anlegen.
+- Fehler in einem Modul dürfen andere Bereiche nicht blockieren.
+
+C. Materialien
+- Arbeitsblatt und Musterlösung in der ursprünglichen Druckform unter materials/<slug>/ ablegen.
+- App-CSS darf nicht in diese Dokumente hineinwirken.
+- Sicherung separat erstellen; jede sinnvolle Lösungseinheit einzeln aufdeckbar machen.
+
+D. Release
+- Nur betroffene Module ändern.
+- Schutzprüfsummen, JS-Syntax, Verweise und ZIP-Struktur prüfen.
+- Vollständige App als versionierte ZIP-Datei ausgeben.

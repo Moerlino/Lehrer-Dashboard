@@ -1,0 +1,182 @@
+Version 1.8.1 – GitHub-Pages-Datenbankkorrektur
+- Gemeinsame IndexedDB-Struktur für Unterrichtsbibliothek und Präsentationen.
+- Migration von Datenbankversion 4 auf 5 ergänzt fehlende Objektspeicher automatisch.
+- Behebt den Fehler „One of the specified object stores was not found“ auf frischen Web-Ursprüngen.
+- Bessere Meldung, falls die Migration durch einen parallel geöffneten Dashboard-Tab blockiert wird.
+- Service-Worker-Cache und Versionsparameter aktualisiert.
+
+Version 1.8.0
+- GitHub-Pages-Workflow und .nojekyll ergänzt.
+- PWA-Metadaten und PNG-Icons für iPhone/iPad ergänzt.
+- Installationshinweis für „Zum Home-Bildschirm“ ergänzt.
+- Mobile Darstellung, Touch-Ziele, Safe Areas und Notenbuch-Scrollansicht optimiert.
+- App bleibt unter Projekt-Unterpfaden funktionsfähig.
+
+Version 1.8.0 – Notenschlüssel und Punkteingabe im lokalen Notenbuch
+- Schriftliche und mündliche Leistungen können wahlweise als direkte Dezimalnote oder als Punktebewertung angelegt werden.
+- Pro Leistung lassen sich Maximalpunktzahl und Prozentanker für die Noten 1,0 bis 5,0 einstellen.
+- Zwischen den Ankerpunkten werden Dezimalnoten stufenlos berechnet; unterhalb der 5,0-Grenze bis 0 % wird bis 6,0 interpoliert.
+- In der Notenmatrix steht die berechnete Dezimalnote groß; die eingegebene Punktzahl erscheint darunter kleiner.
+- Änderungen am Notenschlüssel berechnen vorhandene Punkteeinträge neu.
+- Bestehende Direktnoten und Notenbuchdaten bleiben kompatibel.
+- Das Einstellungen-Symbol wurde auf ein schlichtes Zahnrad reduziert.
+
+Version 1.6.2 – Notenbuch-Bedienelemente präzisiert
+- Plus-Symbole als zentrierte SVG-Icons umgesetzt
+- CSV-Import mit eigenem Tabellen-/Import-Icon versehen
+- Datenschutzmodus mit Inkognito-Symbol; im aktiven Modus erscheint ein Auge zum Wiederanzeigen
+- Klassenkarten besitzen nun einen klaren, überlappungsfreien Öffnen-Chip
+- Unklare dekorative Drei-Punkte-Anzeige auf Klassenkarten entfernt
+
+Version 1.6.1 – Notenbuch-Oberfläche neu gestaltet
+
+- Klassenübersicht als farbcodierte Mosaikansicht mit großen Klassenkarten
+- kompakte Aktionsleiste für Anlegen, Sicherung, Wiederherstellung und Datenschutzmodus
+- Notenmatrix mit farblich getrennten Bereichen Gesamt, schriftlich und mündlich
+- Gesamtnote und Schülernamen bleiben beim horizontalen Scrollen sichtbar
+- Leistungen können direkt aus den Gruppenüberschriften angelegt werden
+- Gewichtung und Klassenoptionen in einen einklappbaren Bereich verschoben
+- Funktionen und lokale Datenstruktur bleiben unverändert
+
+Version 1.6.0 – Lokales Notenbuch
+- Klassen- und Schülerverwaltung
+- CSV-Import und manuelle Bearbeitung
+- schriftliche und mündliche Dezimalnoten
+- einstellbare Gewichtung, Berechnung und Datenschutzmodus
+- Schülerarchiv und Notenbuchsicherung
+
+Version 1.6.0 – Adaptive Stundennummern
+
+- Mehrstellige Stundenangaben wie 02/03, 05/06 und 11/12 erhalten eine automatisch breitere Nummernfläche.
+- Ein- und zweistellige Nummern sowie alle übrigen Kartenicons behalten das bisherige quadratische Layout.
+- Korrektur gilt für importierte und fest eingebaute Unterrichtseinheiten.
+
+Version 1.5.0 – Unterrichtsmodus
+- Neuer Button „Unterricht starten“ in jeder importierten Stunde.
+- Automatische Übernahme der Unterrichtsphasen aus dem Verlaufsplan.
+- Phasenbezogener Countdown mit Start/Pause, Reset und +1 Minute.
+- Direkte Navigation zu Präsentation, Materialien, Hilfen und Verlaufsplan.
+- Notausstieg und Minimalfahrplan im Unterricht jederzeit aufklappbar.
+- Reduzierte Vollbildansicht ohne Dashboard-Navigation.
+- Aktuelle Phase wird innerhalb der Sitzung gespeichert.
+
+UnterrichtsDashboard v1.4.0
+- Präsentationen als eigener Inhaltstyp pro Unterrichtsstunde.
+- Import eigenständiger HTML-Präsentationen direkt in der Stunde oder zentral in der Verwaltung.
+- Automatische Zielerkennung über ud-unit-id und ud-lesson-id; manuelle Zuordnung als Fallback.
+- Präsentationsmodus ohne Dashboard-Oberfläche mit Vollbild, Neuladen und Rückkehr zur Stunde.
+- Präsentationen lassen sich ersetzen, exportieren und entfernen.
+- Bibliothekssicherungen enthalten nun auch Präsentationen.
+- Importierte Präsentationen laufen isoliert in einem Sandbox-iFrame.
+
+Version 1.3.1
+- Starter erkennt und beendet einen veralteten Dashboard-Server auf Port 4173, statt versehentlich die alte App zu öffnen.
+- App-Shell nutzt versionsgebundene URLs und einen Network-first-Service-Worker.
+- Neue importierte Einheiten benötigen keine Abnahme gegen eine statische Doppelung.
+- Bestehende IndexedDB-Unterrichtsbibliothek bleibt durch die feste Origin erhalten.
+
+Version 1.3.0 – Produktfreigabe der Unterrichtsbibliothek
+- Beta-Kennzeichnung und manuellen Abnahmeschritt entfernt.
+- Importierte Einheiten sind nach erfolgreicher Paketprüfung sofort regulär aktiv.
+- Bestandseinheiten werden beim ersten Produktstart einmalig automatisch in die lokale Bibliothek übernommen.
+- Statische Fassungen aus der normalen Navigation entfernt und als geschütztes Rückfallarchiv erhalten.
+- Verwaltungsoberfläche auf Import, Aktualisierung, Export, Sicherung und Wiederherstellung bereinigt.
+- Produktdokumentation und Rückfallstrategie ergänzt.
+
+Version 1.2.2-testbereit-beta – Druckdialog nur einmal
+
+- Doppelten verzögerten Druckauftrag aus der Dashboard-Drucksteuerung entfernt.
+- Pro Druckklick wird nun höchstens ein postMessage-Druckauftrag an das temporäre Druckdokument gesendet.
+- Abbrechen oder Abschließen des Druckdialogs öffnet keinen zweiten Druckdialog mehr.
+- Sprachinseln-Druckfunktion und geschützte Originaldateien unverändert.
+
+Version 1.2.1-testbereit-beta – Starterkorrektur
+- macOS-Starter im ZIP mit gesetztem Ausführungsrecht.
+- Zusätzlicher, gut sichtbarer Starter „Dashboard starten.command“.
+- Robuste Erkennung von Python 3 sowie Ruby-/PHP-Fallback.
+- Bereits laufender Server wird erkannt und nur im Browser geöffnet.
+- Startanleitung START_HIER.txt ergänzt.
+
+Version 1.2.1-testbereit-beta – Schritt 7
+- Importierte Einheiten werden automatisch in die reguläre Hierarchie Schulform → Fach → Lernjahr einsortiert.
+- Statische und dynamische Doppelungen werden in der regulären Ansicht zu einer Karte zusammengeführt.
+- Die dynamische Einheit bietet weiterhin einen direkten Vergleichslink zur statischen Fassung.
+- Automatischer Abnahmecheck für Navigation, Handbuch, Stundenstruktur und Materialien.
+- Manueller Freigabestatus „Dynamisch abgenommen“, lokal gespeichert und über Bibliothekssicherungen portierbar.
+- Dynamisch neu angelegte Schulformen, Fächer und Lernjahre werden unterstützt.
+- Aktualisieren, Entfernen und Einzelwiederherstellung setzen die Abnahme zur Sicherheit zurück.
+- Geschützte Originaldateien und statische Rückfallfassungen bleiben unverändert.
+
+Version 1.0.0-import-beta
+- Schritt 5: vollständige Bibliothekssicherung und Wiederherstellung
+- Export aller dynamischen Einheiten, internen Wiederherstellungspunkte und lokalen Einstellungen in eine .unterrichtsbibliothek.zip-Datei
+- geprüfte Vorschau vor vollständiger Wiederherstellung oder Zusammenführung
+- atomare Wiederherstellung mit Sicherung des vorher aktiven Bestands
+- optionaler dauerhafter Browser-Speicher
+- stabiler lokaler Starter auf http://localhost:4173, nur an 127.0.0.1 gebunden
+- PWA-Manifest und Service-Worker-Cache aktualisiert
+- Produktivversion v0.7.0 bleibt unverändert
+
+Version 0.9.0-import-beta
+- Schritt 4: vollständige Importverwaltung für dynamische Einheitspakete
+- verbindliche Importvorschau vor jeder Speicherung
+- Konflikterkennung mit Versionsvergleich und den Optionen Ersetzen, Kopie oder Abbruch
+- atomare Aktualisierung und Entfernung in IndexedDB
+- automatische Wiederherstellungspunkte vor Ersetzen, Entfernen und Leeren
+- Export importierter Einheiten zurück in ein gültiges .unterricht.zip-Paket
+- Wiederherstellen und gezieltes Löschen einzelner Sicherungspunkte
+- Produktivversion v0.7.0 bleibt unverändert
+
+Version 0.8.0-import-beta
+- Schritt 3: dynamische Inhaltsbibliothek parallel zu den fest eingebauten Inhalten
+- lokale IndexedDB-Speicherung von Paketen nach Importstandard 1.0
+- dynamische Navigation, Suche und Modulansichten
+- Produktivversion v0.7.0 bleibt unverändert
+
+Version 0.7.0
+- Berufsschule → Deutsch → 3. Lehrjahr → 04 Sprachlicher Feinschliff ergänzt.
+- Acht Einheiten vollständig modular integriert.
+- AB 01–08 und Musterlösungen als druckgetreue Einzeldokumente übernommen.
+- Interaktive Sicherungen mit einzeln aufdeckbaren Tabellenzellen, Listeneinträgen und Textabschnitten erzeugt.
+- Original-Lehrerhandbuch unverändert geschützt.
+
+Version 0.6.12
+- Druckfunktion für externe Material-HTMLs im lokalen file://-Betrieb korrigiert.
+- Der Druck wird nun im Materialdokument selbst ausgelöst; kein sichtbarer Tab und kein Zugriff auf fremde file://-Dokumente nötig.
+- Doppelaufrufe werden abgefangen. Geschützte Lehrerhandbücher und Sprachinseln-Originaldateien unverändert.
+
+Version 0.6.12
+- Druckdialog für Arbeitsblätter, Musterlösungen und Sicherungen wird nun wie bei den Sprachinseln über einen unsichtbaren Druck-Frame geöffnet – ohne sichtbaren Zusatz-Tab.
+- Druckbuttons für Arbeitsblatt, Musterlösung und Sicherung öffnen nun ein eigenes temporäres Druckfenster.
+- Das Dokument startet dort automatisch den Browser-Druckdialog und schließt sich nach dem Drucken wieder.
+- Fallback über postMessage, falls Pop-up-Fenster durch den Browser blockiert werden.
+- Geschützte Handbücher und Sprachinseln-Originaldateien unverändert.
+
+UnterrichtsDashboard v0.6.9
+
+- Einheitliches Direktdrucken: Ein Klick auf „Arbeitsblatt drucken“ öffnet unmittelbar den Browser-Druckdialog.
+- Robuster Druckaufruf für eingebettete A4-Dokumente, auch wenn das Dokument beim Klick noch lädt.
+- Keine neue Registerkarte als regulärer Druck-Zwischenschritt.
+- Inkrementelles Update; geschützte Lehrerhandbücher und Sprachinseln-Originaldateien unverändert.
+
+UnterrichtsDashboard v0.6.8
+
+- Druckränder der Sprachinseln-Arbeitsblätter werden nun über @page auf jeder Druckseite wiederholt.
+- Folgeseiten beginnen mit sicherem oberen Rand; Überschriften und Nummernkreise werden nicht mehr angeschnitten.
+- Tabellenzeilen bleiben vollständig, Tabellenköpfe werden bei Seitenwechseln wiederholt.
+- Geschützte Lehrerhandbücher und Originaldateien der Sprachinseln wurden nicht verändert.
+
+Bisherige Änderungen:
+- Arbeitsblattansicht der Sprachinseln bleibt in echter A4-Größe und darf innerhalb ihres Bereichs scrollen.
+- Automatische Verkleinerung des Arbeitsblatts entfernt.
+- Druckdialog nutzt ein isoliertes Druckdokument; die bisherige leere erste Druckseite entfällt.
+- AVDual-Navigation vereinfacht: AVDual → Fach → Einheit, ohne Menüebene „Grundstufe“.
+- Geschützte Lehrerhandbücher und Originaldateien der Sprachinseln wurden nicht verändert.
+
+
+Version 1.1.0-migration-beta – Schritt 6
+- Vorbereitete Bestandsmigrationen für „Literarische Texte verstehen“ und „04 Sprachlicher Feinschliff“.
+- Direkte Vergleichslinks zwischen statischer und dynamischer Fassung.
+- Platzhalterstatus der 2BFS-Reihe wird bei der Migration erhalten.
+- Sprachinseln bleiben unverändertes Sondermodul.
+- Beide Migrationspakete werden offline mit der App ausgeliefert.

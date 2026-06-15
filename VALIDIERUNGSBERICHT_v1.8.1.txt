@@ -1,0 +1,30 @@
+VALIDIERUNGSBERICHT – UNTERRICHTSDASHBOARD 1.8.1
+
+Anlass
+- Auf einer neu veröffentlichten GitHub-Pages-Adresse konnte die Unterrichtsbibliothek nicht initialisiert beziehungsweise wiederhergestellt werden.
+- Browsermeldung: Failed to execute 'transaction' on 'IDBDatabase': One of the specified object stores was not found.
+
+Ursache
+- Unterrichtsbibliothek und Präsentationsmodul nutzen dieselbe IndexedDB-Datenbank.
+- Bei einem neuen Website-Ursprung konnte das Präsentationsmodul die Datenbank zuerst mit nur zwei von vier benötigten Objektspeichern anlegen.
+- Das Bibliotheksmodul öffnete anschließend dieselbe Datenbankversion ohne erneutes Upgrade und fand seine Speicher nicht.
+
+Korrektur
+- Datenbankversion von 4 auf 5 erhöht.
+- Beide Module erzeugen bei einem Upgrade immer die vollständige gemeinsame Struktur:
+  units, backups, presentations, presentationBackups.
+- Nach dem Öffnen wird die Vollständigkeit geprüft.
+- Blockierte Upgrades liefern eine verständliche Meldung.
+- App- und Service-Worker-Version auf 1.8.1 erhöht.
+
+Prüfungen
+- JavaScript-Syntax für dynamic-library.js und presentations.js erfolgreich.
+- Beide Upgrade-Routinen enthalten alle vier Objektspeicher.
+- Beide Module verwenden Datenbankversion 5.
+- Versions- und Cache-Verweise zeigen auf 1.8.1.
+- Geschützte Unterrichtsdateien wurden nicht verändert.
+- ZIP-Integrität erfolgreich.
+
+Ergebnis
+- Die App kann auf einem frischen GitHub-Pages-Ursprung die vollständige lokale Datenbankstruktur anlegen.
+- Eine bereits fehlerhaft angelegte Datenbank der Version 4 wird beim ersten Start von 1.8.1 auf Version 5 migriert.

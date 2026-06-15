@@ -1,0 +1,36 @@
+SCHRITT 7 – ABNAHME UND REGULÄRE EINSORTIERUNG
+
+ZIEL
+Importierte Unterrichtseinheiten werden nicht mehr als eigener Inhaltsbereich geführt. Sie erscheinen automatisch an dem Ort, den ihr Manifest beschreibt: Schulform → Fach → Lernjahr → Einheit.
+
+UMSETZUNG
+- Statische und dynamische Einheiten werden in den regulären Lernjahransichten zusammengeführt.
+- Besitzt eine importierte Einheit denselben Navigationsort und Titel wie eine statische Einheit, wird nur eine reguläre Karte angezeigt. Diese öffnet die dynamische Fassung.
+- Die statische Fassung bleibt innerhalb der dynamischen Einheit über „Statische Fassung vergleichen“ erreichbar.
+- Neue Schulformen, Fächer oder Lernjahre, die nur in Importpaketen vorkommen, werden als dynamische Hierarchie ergänzt.
+- Der Bereich „Einheiten verwalten“ dient nur noch Import, Abnahme, Export, Sicherung und Wiederherstellung.
+
+ABNAHME
+Vor der manuellen Freigabe prüft die App automatisch:
+1. regulärer Navigationsort erkannt,
+2. Originalhandbuch vorhanden,
+3. Stundenanzahl stimmt mit der statischen Fassung überein,
+4. Stunden-IDs und Bearbeitungsstände stimmen überein,
+5. Arbeitsblätter, Musterlösungen und Sicherungen der ausgearbeiteten Stunden sind vollständig.
+
+Nach erfolgreicher Prüfung kann „Abnahme bestätigen“ gewählt werden. Der Status wird lokal gespeichert und in der regulären Navigation als „Dynamisch abgenommen“ angezeigt. Die Abnahme kann jederzeit zurückgenommen werden.
+
+SICHERHEIT
+- Die statischen Fassungen und geschützten Originaldateien bleiben unverändert.
+- Aktualisieren, Entfernen und Wiederherstellen setzen die Abnahme zurück, damit eine geänderte Einheit erneut geprüft wird.
+- Abnahmestände werden über die bestehende Bibliothekssicherung mitgesichert.
+
+TESTABLAUF
+1. App mit start-dashboard.command oder start-dashboard.bat starten.
+2. „Einheiten verwalten“ öffnen.
+3. Eine vorbereitete Migrationsfassung importieren.
+4. Über die reguläre Hierarchie zur Einheit navigieren.
+5. Statische und dynamische Fassung vergleichen.
+6. Automatische Prüfpunkte kontrollieren.
+7. „Abnahme bestätigen“ wählen.
+8. Zur Lernjahransicht zurückkehren und Status „Dynamisch abgenommen“ prüfen.

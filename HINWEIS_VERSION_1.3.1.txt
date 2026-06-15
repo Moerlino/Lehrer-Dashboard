@@ -1,0 +1,7 @@
+UnterrichtsDashboard 1.3.1 – Starter- und Cachekorrektur
+
+Die Ansicht „Abnahme offen“ gehörte zur früheren Beta-Version. Ursache war in der Regel ein noch laufender lokaler Server einer älteren App-Version auf Port 4173. Der alte Starter öffnete diesen Server einfach erneut.
+
+Version 1.3.1 prüft die laufende Version. Ein eigener älterer Dashboard-Server wird beendet und durch die aktuelle Version ersetzt. Zusätzlich werden zentrale App-Dateien versionsgebunden geladen und der Service Worker verwendet für die App-Oberfläche eine Network-first-Strategie.
+
+Neue Unterrichtseinheiten werden nach erfolgreicher Paketprüfung unmittelbar aktiviert. Eine Abnahme gegen eine statische Vergleichsfassung ist nicht erforderlich.

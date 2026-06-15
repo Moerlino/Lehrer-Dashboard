@@ -1,0 +1,24 @@
+VALIDIERUNGSBERICHT – UnterrichtsDashboard v1.6.0
+
+Prüfbereich: lokales Notenbuch v1.0
+
+OK   Notenbuch-Modul eingebunden
+OK   Notenbuch-Route registriert
+OK   IndexedDB lokal
+OK   Keine Netzwerk-API im Notenbuch
+OK   CSV-Import vorhanden
+OK   Manuelle Schülerbearbeitung
+OK   Mündlicher Datumstitel
+OK   Dezimalnoten 1–6
+OK   Gewichtung 100 Prozent
+OK   Standardgewichtung 50:50
+OK   Leere Zellen ohne Einfluss
+OK   Schülerarchiv
+OK   Datenschutzmodus
+OK   Backup/Wiederherstellung
+OK   Notenmatrix CSS
+OK   App-Version
+
+Ergebnis: GÜLTIG
+
+Hinweis: Ein vollständiger automatisierter Browser-Klicktest war in der Containerumgebung nicht möglich. JavaScript-Syntax, App-Struktur und gezielte Funktionsmerkmale wurden geprüft.

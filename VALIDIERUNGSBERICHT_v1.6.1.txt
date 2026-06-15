@@ -1,0 +1,19 @@
+VALIDIERUNGSBERICHT – UnterrichtsDashboard v1.6.1
+
+Gegenstand
+- Visuelle Überarbeitung des lokalen Notenbuchs nach dem Bedienprinzip moderner Lehrkraft-Notenbücher.
+- Keine Änderung des IndexedDB-Schemas oder der Berechnungslogik.
+
+Geprüft
+- JavaScript-Syntax: erfolgreich
+- Bestehende Klassen-, Schüler-, Leistungs- und Notendaten bleiben kompatibel
+- CSV-Import, Archiv, Gewichtung, Datenschutzmodus und Sicherung bleiben angebunden
+- Klassenübersicht besitzt adaptive Mosaikkarten
+- Matrixbereiche Gesamt, schriftlich und mündlich sind eindeutig farblich getrennt
+- Sticky Schüler- und Gesamtnotenspalten vorhanden
+- Responsive Regeln für schmalere Fenster vorhanden
+- Service-Worker- und Versionsangaben auf 1.6.1 aktualisiert
+- ZIP-Integrität und Starterrechte werden beim Paketieren geprüft
+
+Hinweis
+Die Oberfläche ist an den von der Lehrkraft gezeigten Arbeitsprinzipien orientiert, ohne die fremde Anwendung oder deren Markenauftritt zu kopieren.

@@ -1,0 +1,28 @@
+SCHRITT 3 – DYNAMISCHE INHALTSBIBLIOTHEK (BETA)
+==================================================
+
+Diese Beta basiert auf UnterrichtsDashboard v0.7.0. Die produktive Referenzversion wurde nicht verändert.
+
+Neu:
+- eigener Bereich „Importierte Einheiten (Beta)“
+- Speicherung gültiger Unterrichtspakete in IndexedDB
+- Navigation und Suche werden dynamisch aus manifest.json erzeugt
+- Stundenmodule werden innerhalb der App angezeigt
+- Originalhandbuch bleibt unverändert als separate Datei abrufbar
+- Arbeitsblatt, Musterlösung und Sicherung werden als eigenständige Druckansichten geladen
+- fest eingebaute Inhalte bleiben parallel vollständig erhalten
+
+Test:
+1. start-dashboard.command (macOS) oder start-dashboard.bat (Windows) starten.
+2. „Referenzpaket laden“ anklicken oder ein .unterricht.zip auswählen.
+3. Die importierte Einheit in der dynamischen Bibliothek öffnen.
+4. Navigation, Stundenmodule, Handbuch und Materialansichten prüfen.
+
+Bewusste Grenzen in Schritt 3:
+- noch keine reguläre Aktualisieren-/Löschen-/Exportieren-Verwaltung
+- kein vollständiges Bibliotheksbackup
+- Konflikte mit bereits importierten IDs werden in dieser Beta überschrieben
+- die Produktiv-App v0.7.0 bleibt die stabile Referenz
+
+NÄCHSTER SCHRITT:
+Schritt 4 – Importverwaltung: Vorschau, Konfliktbehandlung, Aktualisieren, Entfernen, Exportieren und atomare Wiederherstellungspunkte.

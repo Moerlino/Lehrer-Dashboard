@@ -1,0 +1,8 @@
+UNTERRICHTSDASHBOARD 1.5.1 STARTEN
+
+macOS: „Dashboard starten.command“ doppelklicken.
+Windows: „start-dashboard.bat“ doppelklicken.
+
+NEU: Jede importierte Unterrichtsstunde besitzt einen Präsentationsbereich. Eigenständige HTML-Präsentationen können direkt dort oder zentral unter „Einheiten verwalten“ importiert werden.
+
+Die Beispielpräsentation liegt unter examples/Beispielpraesentation_Betriebsrat_Stunde_1.html.

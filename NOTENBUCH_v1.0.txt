@@ -1,0 +1,26 @@
+NOTENBUCH v1.0 – UnterrichtsDashboard 1.6.2
+================================================
+
+Das Notenbuch speichert alle Klassen- und Notendaten ausschließlich lokal in der Browserdatenbank IndexedDB unter localhost:4173.
+
+FUNKTIONSUMFANG
+- Klassen anlegen und bearbeiten
+- Schülerlisten als CSV importieren
+- Schüler manuell hinzufügen und Namen bearbeiten
+- schriftliche und mündliche Einzelnoten
+- mündliche Leistung mit aktuellem Datum als Standardtitel
+- Dezimalnoten von 1,0 bis 6,0
+- Gesamtgewichtung schriftlich/mündlich; Standard 50:50
+- automatische Dezimaldurchschnitte
+- leere Notenfelder werden nicht berücksichtigt
+- Datenschutzmodus verdeckt Namen und Noten
+- Schülerarchiv mit Wiederherstellung und endgültigem Löschen
+- separate Notenbuchsicherung im Format .notenbuch
+
+CSV-BEISPIEL
+Nachname;Vorname
+Müller;Anna
+Schneider;Tim
+
+DATENSCHUTZ
+Es findet keine Serverübertragung statt. Das Notenbuch besitzt auf Wunsch des Nutzers keine zusätzliche PIN oder Passwortabfrage. Der Zugriffsschutz hängt daher von der Gerätesperre und dem lokalen Benutzerkonto ab.
